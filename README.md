@@ -1,5 +1,7 @@
+# InnoCTF
+
 picoCTF-Platform 2
-==============
+-----------
 
 The picoCTF Platform 2 is the infrastructure on which picoCTF runs. The 
 platform is designed to be easily adapted to other CTF or programming 
@@ -10,18 +12,36 @@ any "standard" Linux distribution. It would probably even work on
 Windows. MongoDB must be installed; all default configurations should 
 work.
 
+More about platform: [picoctf wiki](https://github.com/picoCTF/picoCTF-platform/wiki).
+
 Setting Up
 ------------
-1. Download VirtualBox (easiest, though others can work)
-2. Download Vagrant (vagrantup.com)
-3. `vagrant up` inside the repo
-4. Wait 20 minutes
-5. `vagrant ssh` to connect to the VM
-6. Run `devploy` to deploy the development version of the site
-7. Go to port 8080 on the Host Machine
-8. Remember to always use 127.0.0.1:8080 not localhost:8080
+```bash
+$ ssh vagrant@188.130.155.34 -p 6174 # connect to vagrant VM
+$ devploy                            # to reload web server, apply config, etc
+```
 
-*Note*: The competition has two modes: competition active and competition inactive. In inactive mode, there are no problems and only registration is available. To change what mode the competition is in, edit api/api/config.py and change the competition dates such that the current date is either inside or outside the range of the competition dates.
+Creating news
+------------
+All posts are in the folder `/home/vagrant/web/_posts`. 
+
+To create new post:
+
+  - Create new file with name `YYYY-MM-DD-postname.markdown at `/home/vagrant/web/_posts`
+  - Add this header:
+```
+---
+title:  "Name of the post"  # post title
+date:   2015-01-01 17:29:23 # date 
+categories: ctfs awesome    # category
+---
+```
+  - Use Markdown to fill post content.
+  - Publish post:
+```bash
+# run this inside VM
+$ jekyll-reload-pages 
+```
 
 
 Loading the Example Problems (In the vagrant VM)
@@ -49,19 +69,3 @@ Getting Started
 ---------------
 
 A detailed explanation of the basics of the picoCTF Platform 2 can be found in our [Getting Started Guide](GettingStarted.md).
-
-
-Contact
-------------
-
-We are happy to help but no support is guaranteed.
-
-Authors: Jonathan Burket, Tim Becker, Chris Ganas
-
-Copyright: Carnegie Mellon University
-
-License: MIT
-
-Credits: David Brumley, Tim Becker, Chris Ganas, Peter Chapman, Jonathan Burket
-
-Email: opensource@picoctf.com
