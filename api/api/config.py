@@ -11,7 +11,7 @@ import api.app
 
 """ FLASK """
 
-api.app.session_cookie_domain = "ctf.university.innopolis.ru"
+api.app.session_cookie_domain = "innoctf.com"
 api.app.session_cookie_path = "/"
 api.app.session_cookie_name = "flask"
 
@@ -41,8 +41,8 @@ enable_teachers = True
 enable_feedback = True
 
 competition_name = "InnoCTF"
-competition_urls = ["ctf.university.innopolis.ru:8080"]
-#competition_urls = ["ctf.university.innopolis.ru"]
+#competition_urls = ["ctf.university.innopolis.ru:8080"]
+competition_urls = ["innoctf.com"]
 
 # Max users on any given team
 api.team.max_team_users = 4
@@ -91,12 +91,12 @@ shell_user_creation = "sudo useradd -m {username} -p {password}"
 
 """ EMAIL (SMTP) """
 
-api.utilities.enable_email = False
-api.utilities.smtp_url = ""
-api.utilities.email_username = ""
-api.utilities.email_password = ""
-api.utilities.from_addr = ""
-api.utilities.from_name = ""
+api.utilities.enable_email = True
+api.utilities.smtp_url = "innoctf.com"
+api.utilities.email_username = "admin"
+api.utilities.email_password = "bce04cb53b0bcedd"
+api.utilities.from_addr = "admin@innoctf.com"
+api.utilities.from_name = "InnoCTF support"
 
 """ CAPTCHA """
 enable_captcha = False
@@ -112,5 +112,5 @@ api.autogen.seed = "be30f7b00c5db6ed64e798d79ed24b4c"
 
 # Will be emailed any severe internal exceptions!
 # Requires email block to be setup.
-api.logger.admin_emails = ["admin@ctf.university.innopolis.ru"]
+api.logger.admin_emails = ["admin@innoctf.com"]
 api.logger.critical_error_timeout = 600
