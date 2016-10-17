@@ -1,4 +1,4 @@
-recaptchaPublicKey = ""
+recaptchaPublicKey = "6LeqewkUAAAAAAAOMrwW6vF6ay2rUlA701_KitdD"
 
 reloadCaptcha = ->
   apiCall "GET", "/api/user/status", {}
@@ -17,7 +17,7 @@ setRequired = ->
 
 
 checkEligibility = ->
-    is_us = $("#country-select").val() in ["US", ""]
+    in_ru = $("#country-select").val() in ["RU"]
     is_k12 = $("#background-select").val() in ["student_el", "student_ms", "student_hs", "student_home"]
     is_student = $("#background-select").val() in ["student_el", "student_ms", "student_hs", "student_home", "student_undergrad", "student_grad"]
     is_teacher = $("#background-select").val() == "teacher"
