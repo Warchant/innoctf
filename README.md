@@ -40,7 +40,8 @@ categories: ctfs awesome    # category
   - Publish post:
 ```bash
 # run this inside VM
-$ jekyll-reload-pages 
+$ cd ${VAGRANT_PATH}/web
+$ sudo jekyll build
 ```
 
 
