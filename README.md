@@ -12,7 +12,7 @@ any "standard" Linux distribution. It would probably even work on
 Windows. MongoDB must be installed; all default configurations should 
 work.
 
-More about platform: [picoctf wiki](https://github.com/picoCTF/picoCTF-platform/wiki).
+More about platform: [picoctf wiki](./GettingStarted.md).
 
 Setting Up
 ------------
