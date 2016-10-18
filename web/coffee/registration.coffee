@@ -47,16 +47,16 @@ submitRegistration = (e) ->
   creatingNewTeam = $("#registration-new-team-page").is(":visible")
   creatingTeacherAccount = $("#registration-adviser-page").is(":visible")
   registrationData["create-new-team"] = creatingNewTeam
-  registrationData["create-new-teacher"] = creatingTeacherAccount
+  #registrationData["create-new-teacher"] = creatingTeacherAccount
 
   if creatingNewTeam
     registrationData["ctf-emails"] = $("#checkbox-emails-create").is(':checked')
     submitButton = "#register-button-create"
     logType = "NewTeam"
-  else if creatingTeacherAccount
-    registrationData["ctf-emails"] = $("#checkbox-emails-teacher").is(':checked')
-    submitButton = "#register-button-teacher"
-    logType = "NewTeacher"
+  #else if creatingTeacherAccount
+  #  registrationData["ctf-emails"] = $("#checkbox-emails-teacher").is(':checked')
+  #  submitButton = "#register-button-teacher"
+  #  logType = "NewTeacher"
   else
     registrationData["ctf-emails"] = $("#checkbox-emails-existing").is(':checked')
     submitButton = "#register-button-existing"
@@ -68,7 +68,7 @@ submitRegistration = (e) ->
       when 0
         $(submitButton).apiNotify(data, {position: "right"})
         ga('send', 'event', 'Registration', 'Failure', logType + "::" + data.message)
-        grecaptcha.reset()
+        #grecaptcha.reset()
       when 1
         ga('send', 'event', 'Registration', 'Success', logType)
         if creatingTeacherAccount
@@ -121,6 +121,21 @@ $ ->
 
   $("#country-select").on "change", checkEligibility
   $("#background-select").on "change", checkEligibility
+  
+  sizes = [
+    ["XXXS", "76-81"],
+    ["XXS", "81-86"],
+    ["XS", "86-91"],
+    ["S", "91-96"],
+    ["M", "96-101"],
+    ["L", "101-106"],
+    ["XL", "106-111"],
+    ["XXL", "111-116"],
+    ["XXXL", "116-121"]
+  ]
+  tshirt_options = for index, label of sizes
+    "<option name='#{label[0]}'>#{label[0]}, #{label[1]} cm</options>"
+  $("#tshirt-select").html(tshirt_options)
 
   $("#country-select").html('
         <option value="">Country...</option>

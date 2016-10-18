@@ -139,7 +139,7 @@ def get_user(name=None, uid=None):
 
     return user
 
-def create_user(username, firstname, lastname, email, password_hash, tid, teacher=False,
+def create_user(username, firstname, lastname, email, password_hash, tid, tshirt, teacher=False,
                 background="undefined", country="undefined", receive_ctf_emails=False):
     """
     This inserts a user directly into the database. It assumes all data is valid.
@@ -152,6 +152,7 @@ def create_user(username, firstname, lastname, email, password_hash, tid, teache
         password_hash: a hash of the user's password
         tid: the team id to join
         teacher: whether this account is a teacher
+        tshirt: size of the tshirt
     Returns:
         Returns the uid of the newly created user
     """
@@ -182,7 +183,8 @@ def create_user(username, firstname, lastname, email, password_hash, tid, teache
         'disabled': False,
         'background': background,
         'country': country,
-        'receive_ctf_emails': receive_ctf_emails
+        'receive_ctf_emails': receive_ctf_emails,
+        'tshirt' : tshirt
     }
 
     db.users.insert(user)
@@ -281,6 +283,7 @@ def create_user_request(params):
             params["email"],
             hash_password(params["password"]),
             tid,
+            params["tshirt"],
             teacher=True,
             background=params["background"],
             country=params["country"],
@@ -326,6 +329,7 @@ def create_user_request(params):
         params["email"],
         hash_password(params["password"]),
         team["tid"],
+        params["tshirt"],
         background=params["background"],
         country=params["country"],
         receive_ctf_emails=params["ctf-emails"]
