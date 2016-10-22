@@ -25,9 +25,9 @@ npm install -g react-tools
 npm install -g jsxhint
 
 if [ -d /home/vagrant ]; then
-  export VAGRANT_PATH=/home/vagrant
+    export VAGRANT_PATH=/home/vagrant
 else
-  export VAGRANT_PATH=$(cd $(dirname $0)/..; pwd)
+    export VAGRANT_PATH=$(cd $(dirname $0)/..; pwd)
 fi
 
 pip3 install -r ${VAGRANT_PATH}/api/requirements.txt
@@ -47,12 +47,7 @@ gem install jekyll -v 2.5.3
 # Configure Nginx
 mkdir -p /srv/http/ctf
 cp ${VAGRANT_PATH}/config/https /srv/https
-# either development or production
-current=development
-cp ${VAGRANT_PATH}/config/$current.nginx /etc/nginx/sites-enabled/$current
-if [ "$current" == "production" ]; then
-	sudo cp ${VAGRANT_PATH}/config/tuning/* /etc/nginx/
-fi
+cp ${VAGRANT_PATH}/config/development.nginx /etc/nginx/sites-enabled/innoctf.nginx
 rm /etc/nginx/sites-enabled/default
 service nginx restart
 
