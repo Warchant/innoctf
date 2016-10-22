@@ -45,12 +45,18 @@ pip3 install -r ${VAGRANT_PATH}/api/requirements.txt
 gem install jekyll -v 2.5.3
 
 # Configure Nginx
-cp ${VAGRANT_PATH}/config/ctf.nginx /etc/nginx/sites-enabled/ctf
-rm /etc/nginx/sites-enabled/default
 mkdir -p /srv/http/ctf
+cp ${VAGRANT_PATH}/config/https /srv/https
+# either development or production
+current=development
+cp ${VAGRANT_PATH}/config/$current.nginx /etc/nginx/sites-enabled/$current
+if [ "$current" == "production" ]; then
+	sudo cp ${VAGRANT_PATH}/config/tuning/* /etc/nginx/
+fi
+rm /etc/nginx/sites-enabled/default
 service nginx restart
 
-
+# add ssh keys
 keyfile="/home/vagrant/.ssh/authorized_keys"
 mkdir -p "/home/vagrant/.ssh"
 echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCu9pXtWcLUTBw4sgcE0O4zIuEP8j88fj1aB3IWYlI7cAMLYsBPLhDlSOyutFxtw6ht2zWU0n8GAKxwwtc/wYRc38wsnwFIK3EuCM/p6JOE3GPG51NyCmO3vcN12ONiwhknUVCpFl+QDUzRwyzEHkr10VTbY/1fcIYxrKBrV5xxazzHd4/PrRfpDCiuwnaAaZps7xgJm66tb5ZgvKA5XPlpKG178RY5Y42DDMCi8NVxRIzVQ0pkhvk2wWtlM0e5Rm8aN3/0uCqtl0YdopeNWe6rz6GGIO64fCcNLHvqfms6GJs93hM5fPDZWiIbWpcYwosU6NtSzHAoEIN+erOhuDQ7 rodionov12@menad" >> $keyfile

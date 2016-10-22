@@ -16,6 +16,11 @@ server {
             default_type text/html;
             alias /srv/http/ctf/$1.html;
         }
+	
+	location /nginx_status {
+		stub_status on;
+		access_log off;
+	}
 
         location ~ /problem-static/ {
             default_type application/octet-stream;
