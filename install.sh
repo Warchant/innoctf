@@ -2,6 +2,8 @@
 
 # run this script on clean system to install all dependencies for picoctf platform
 # NOTE: in /ctf must be repo https://github.com/warchant/innoctf
+export VAGRANT_PATH="/ctf"
+
 apt-get update
 apt-get install -y \
     python3-pip \
@@ -32,4 +34,4 @@ chown -R www-data:www-data /srv/http
 cp /ctf/config/https/* /srv/certs
 cp /ctf/config/tuning/* /etc/nginx
 rm /etc/nginx/sites-enabled/default
-nginx -s reload
+service nginx restart

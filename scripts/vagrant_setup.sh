@@ -61,10 +61,10 @@ echo "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAvs+EAhDxMZL5Jh7mq7MjL0PfB2U8zH6cxTiv8i
 echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHrDjw1kqLNMEIgMmFEZt/YBu/eROzbPs9etfPqRtIcUFlMbO+uWVRXJ0HX1quDT23hjyhZMAK9tG/jePdmac7OlrxEkINGltFMT4Eoj2RjUflpHsgbeem6SqrusgIzCn9/2zN1fqA3Pl7DPBCix/7/anUn7NbbAUTzKOnrJ+9gpDKXjInehu5YU2Z/NyCLUHD9d3C9++BMt5YtaPWYCXiPpPE1AJsZStnvo4TeFrUAlnhg9PjtvGV5P+ibPYibj5XA8oodAd4cy4Cximq3iouOIdq2bEQQOKwOIbdgAInyUUKo3miZHIzyzsNraCKq5cMVuai61VipqioWAINPWbN bogdan@st1.os3.su" >> $keyfile
 
 
-# install mongoclient
-cd ${VAGRANT_PATH}
-curl https://install.meteor.com/ | sh
-wget https://github.com/rsercano/mongoclient/archive/master.zip
-unzip master.zip
-rm master.zip
-cd ${VAGRANT_PATH}/mongoclient-master; meteor npm install
+## install mongoclient
+#cd ${VAGRANT_PATH}
+#curl https://install.meteor.com/ | sh
+#wget https://github.com/rsercano/mongoclient/archive/master.zip
+#unzip master.zip
+#rm master.zip
+#cd ${VAGRANT_PATH}/mongoclient-master; meteor npm install
