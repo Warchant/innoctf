@@ -1,4 +1,12 @@
-#!/bin/bash
+#/bin/bash
+
+if [ -z "$VAGRANT_PATH" ]; then
+        export VAGRANT_PATH=/home/ctf/innoctf
+fi
+
+# Starting mongodb
+service mongodb start
+
 
 # Transpile the CoffeeScript files
 echo "Transpiling Coffeescript"
@@ -17,7 +25,6 @@ cd ${VAGRANT_PATH}/web
 sudo jekyll build
 
 echo "Copying files to server"
-#sudo cp -r ${VAGRANT_PATH}/web/* /srv/http/ctf/
 mkdir -p ${VAGRANT_PATH}/problem_static
 sudo cp -r ${VAGRANT_PATH}/problem_static /srv/http/ctf/problem-static
 
@@ -36,4 +43,8 @@ ${VAGRANT_PATH}/api/api_manager.py database clear cache
 echo "Starting the InnoCTF API"
 tmux kill-session -t picoapi 2> /dev/null
 tmux new-session -s picoapi -d "cd ${VAGRANT_PATH}/api && python3 run.py"
-#tmux new-session -s picoapi -d "cd ${VAGRANT_PATH}/api && ./gunicorn_start.sh &"
+
+#Start scoreboard
+echo "Starting scoreboard session"
+tmux kill-session -t scoreboard 2> /dev/null
+tmux new-session -s scoreboard -d "cd ${VAGRANT_PATH}/api/; python3 daemon_manager.py -i 300 cache_stats"
