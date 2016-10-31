@@ -26,9 +26,13 @@ $ sudo mkdir -p logs/nginx    # must be owned by root:root!
 $ docker-compose up
 ```
 
+## Creating problems
+
+Refer to [problems.md](./problems.md) instruction.
 
 Creating news
 ------------
+
 All posts are in the folder `/home/vagrant/web/_posts`. 
 
 To create new post:
