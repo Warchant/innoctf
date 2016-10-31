@@ -9,4 +9,6 @@ web/_includes/analytics.html
 api/graders/autogentest/instances/*
 api/graders/*
 *~
+db
+logs
 
