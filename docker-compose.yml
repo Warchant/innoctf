@@ -1,0 +1,38 @@
+version: '2'
+services:
+  innoctf:
+    image: warchantua/innoctf
+    hostname: innoctf.com
+    domainname: innoctf.com
+    environment:
+      - VAGRANT_PATH=/innoctf
+    expose:
+      - "80"
+      - "443"
+    ports:
+      - "80:80"
+      - "443:443"
+    command: bash -c "${VAGRANT_PATH}/scripts/setup.sh; ${VAGRANT_PATH}/scripts/start.sh"
+    volumes:
+      - ./platform:/innoctf
+      - ./logs:/var/log
+    depends_on:
+      - mongodb
+    links:
+      - mongodb
+
+
+  mongoclient:
+    image: mongoclient/mongoclient
+    links:
+      - mongodb
+
+
+  mongodb:
+    image: mongo
+    hostname: mongodb
+    expose: 
+      - "27017"
+    volumes:
+      - ./db:/var/lib/mongodb
+      - ./platform/config/mongo/mongodb.conf:/etc/mongodb.conf

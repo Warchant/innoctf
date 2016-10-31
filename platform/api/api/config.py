@@ -26,13 +26,13 @@ api.common.allowed_ports = [8080]
 """ MONGO """
 
 api.common.mongo_db_name = "pico"
-api.common.mongo_addr = "127.0.0.1"
+api.common.mongo_addr = "mongodb"
 api.common.mongo_port = 27017
 
 """ TESTING """
 
 testing_mongo_db_name = "ctf_test"
-testing_mongo_addr = "127.0.0.1"
+testing_mongo_addr = "mongodb"
 testing_mongo_port = 27017
 
 """ CTF SETTINGS """
