@@ -17,8 +17,10 @@ More about platform: [picoctf wiki](./GettingStarted.md).
 Setting Up
 ------------
 ```bash
-$ ssh vagrant@188.130.155.34 -p 6174 # connect to vagrant VM
-$ devploy                            # to reload web server, apply config, etc
+git clone https://github.com/Warchant/innoctf
+export VAGRANT_PATH=/innoctf
+cd innoctf
+docker-compose up
 ```
 
 Creating news
@@ -44,26 +46,11 @@ $ cd ${VAGRANT_PATH}/web
 $ sudo jekyll build
 ```
 
-
 Loading the Example Problems (In the vagrant VM)
 ------------
-1. Run `cd ~/api`
+1. Run `cd ${VAGRANT_PATH}/api`
 2. Run `python3 api_manager.py -v problems load /vagrant/example_problems/ graders/ ../problem_static/`
 3. Run `python3 api_manager.py autogen build 100`
-4. Run `devploy`
-
-
-Running the Regression Tests
-----------------------------
-
-The platform comes with a series of regression tests that should be run before any change is committed to the API.
-To run the tests:
-
-1. `vagrant ssh` into your virtual machine.
-2. Run `devploy` to bring up an instance from your latest code.
-3. To be able to import the API, `cd api` and run the tests with `./run_tests.sh`
- 
-All tests should pass with your changes.
 
 
 Getting Started
