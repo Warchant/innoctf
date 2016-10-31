@@ -12,12 +12,12 @@ Switched to a new branch 'web/phpiserable'
 
 Make your changes, commit and push to your branch, then merge:
 
-```
+```bash
 $ git add grader.py
 $ git commit -m "Grader example"
 $ git push origin web/phpiserable 
 $ git checkout master
-$ git pull origin master   # get latest version of the master branch
+$ git pull origin master   # get latest master, merge local conflicts (if present) 
 $ git merge phpiserable
 ```
 
