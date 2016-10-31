@@ -1,9 +1,35 @@
 # How to add your task
 
+## git
+
+First of all, make sure you work in a separate branch:
+
+```bash
+$ git pull origin master            # get latest version of the master branch
+$ git checkout -b web/phpiserable   # category/problem name
+Switched to a new branch 'web/phpiserable'
+```
+
+Make your changes, commit and push to your branch, then merge:
+
+```
+$ git add grader.py
+$ git commit -m "Grader example"
+$ git push origin web/phpiserable 
+$ git checkout master
+$ git pull origin master   # get latest version of the master branch
+$ git merge phpiserable
+```
+
+
+
+## Task types
+
 There are two types of problems:
 
 - *basic* problems - have only one version.
 - *auto-generated* problems - allow for different users to receive different versions of the same problem.
+
 
 
 
