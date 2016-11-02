@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+{% if loans %}
+    <h3><b>Заявки на займы</b></h3>
+    <table class="table">
+        <tr>
+            <th>ID транзакции</th>
+            <th>Сумма</th>
+            <th>Дата</th>
+            <th>Статус</th>
+        </tr>
+        {% for loan in loans %}
+            <tr>
+                <td>{{ loan.id }}</td>
+                <td>{{ loan.amount }}</td>
+                <td>{{ loan.date }}</td>
+                <td>{% if loan.status == 1 %} Ожидание подтверждения {% elif loan.status == 2 %}
+                    Одобрен {% elif loan.status == 3 %}Отклонен{% endif %}</td>
+            <tr>
+        {% endfor %}
+    </table>
+{% else %}
+    Нет активных заявок
+{% endif %}
+{% endblock %}

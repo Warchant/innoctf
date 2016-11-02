@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">
+            {{ message }}
+        </div>
+        {% endfor %}
+    {% endif %}
+    <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="{% url "loan_history" %}">История</a>
+            </li>
+    </ul>
+    <h3><b>Форма запроса кредита</b></h3>
+    <form name="loan_request_form" action="" method="post">
+        {% csrf_token %}
+        {% if next %}
+            <input type="hidden" name="next" value="{{ next }}"/>
+        {% endif %}
+        <div class="form-group">
+            {% if form.non_field_errors %}
+                <div class="alert alert-warning" role="alert">
+                    {{ form.non_field_errors }}
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.amount.id_for_label }}">Запрашиваемая сумма:</label>
+            <input type="text" name="{{ form.amount.name }}" id="{{ form.amount.id_for_label }}" class="form-control">
+            {% if form.amount.errors %}
+                <div class="alert alert-warning" role="alert">
+                    {{ form.amount.errors }}
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.message.id_for_label }}">Дополнительная информация:</label>
+            <textarea class="form-control" id="{{ form.message.id_for_label }}" name="{{ form.message.name }}" rows="3"
+                      required></textarea>
+            {% if form.message.errors %}
+                <div class="alert alert-warning" role="alert">
+                    {{ form.message.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <button class="btn btn-default" type="submit" value="loan_request">Отправить запрос</button>
+    </form>
+
+    <!--
+    <form name="loan_approval_form" action="" method="post">
+    <input type="hidden" value="loan_id" name="loan_id">
+    <button type="submit" value="approve" name="loan_approve">Одобрить</button>
+    <button type="submit" value="decline" name="loan_decline">Отказать</button>
+    </form>
+    -->
+{% endblock %}

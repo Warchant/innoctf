@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+    {% if user_gift_cards %}
+        <h3><b>Приобретенные подарочные карты:</b></h3>
+        <table class="table">
+        <tr>
+            <th>Номинал</th>
+            <th>Номер карты</th>
+        </tr>
+        {% for card in user_gift_cards %}
+            <tr>
+                <td>{{ card.card }}</td>
+                <td>{{ card.card.text }}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    {% endif %}
+
+        <form name="gift_card_form" action="" method="post">
+            {% csrf_token %}
+            {% if next %}
+                <input type="hidden" name="next" value="{{ next }}"/>
+            {% endif %}
+            <div class="form-group">
+                {% if form.non_field_errors %}
+                    <div class="alert alert-warning" role="alert">
+                        {{ form.non_field_errors }}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.value.id_for_label }}">Подарочная карта:</label>
+
+                <select id="{{ form.value.id_for_label }}" class="form-control" name="{{ form.value.name }}">
+                    {% for int, option in form.fields.value.choices %}
+                        <option value="{{ int }}">{{ option }}</option>
+                    {% endfor %}
+                </select>
+
+                {% if form.value.errors %}
+                    <div class="alert alert-warning" role="alert">
+                        {{ form.value.errors }}
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.account.id_for_label }}">Счет для списания средств:</label>
+                <select id="{{ form.account.id_for_label }}" class="form-control" name="{{ form.account.name }}">
+                    {% for int, option in form.fields.account.choices %}
+                        <option value="{{ int }}">{{ option }}</option>
+                    {% endfor %}
+                </select>
+                {% if form.account.errors %}
+                    <div class="alert alert-warning" role="alert">
+                        {{ form.account.errors }}
+                    </div>
+                {% endif %}
+            </div>
+
+            <button class="btn btn-default" type="submit" value="buy_gift_card">Купить</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <p><h1>Блог</h1></p>
+    {% if entries %}
+    <!-- news block -->
+    {% for entry in entries %}
+        <a href="{% url "show_entry" entry.id %}"><h3>{{ entry.title }}</h3></a>
+        <div class="well">
+        {{ entry.content }}
+        </div>
+        {{ entry.author }}
+        {{ entry.date_published }}
+    {% endfor %}
+        {% else %}
+        Здесь пока пусто :(
+    {% endif %}
+{% endblock %}
