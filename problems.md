@@ -18,7 +18,7 @@ $ git commit -m "Grader example"
 $ git push origin web/phpiserable 
 $ git checkout master
 $ git pull origin master   # get latest master, merge local conflicts (if present) 
-$ git merge phpiserable
+$ git merge web/phpiserable
 ```
 
 
