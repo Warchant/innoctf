@@ -45,10 +45,10 @@ competition_name = "InnoCTF"
 competition_urls = ["innoctf.com"]
 
 # Max users on any given team
-api.team.max_team_users = 4
+api.team.max_team_users = 5
 
 # Teams to display on scoreboard graph
-api.stats.top_teams = 5
+api.stats.top_teams = 5 
 
 # start and end times!
 class EST(datetime.tzinfo):

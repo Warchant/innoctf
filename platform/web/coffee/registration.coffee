@@ -19,11 +19,11 @@ setRequired = ->
 checkEligibility = ->
     in_ru = $("#country-select").val() in ["RU"]
     is_inno = $("#background-select").val() in ["inno_liceum", "inno_student"]
-    is_student = $("#background-select").val() in ["inno_liceum", "inno_student", "other_student"]
+    is_student = $("#background-select").val() in ["inno_liceum", "inno_student", "tatar_student"]
     # is_teacher = $("#background-select").val() == "teacher"
 
     # This should be changed to reflect your eligibility requirements
-    if not is_inno
+    if not is_student
         $("#eligibility-warning").show()
     else
         $("#eligibility-warning").hide()
@@ -139,7 +139,7 @@ $ ->
 
   $("#country-select").html('
         <option value="">Country...</option>
-        <option value="US">United States of America</option>
+        <option value="RU">Russia</option>
         <option value="AF">Afghanistan</option>
         <option value="AL">Albania</option>
         <option value="DZ">Algeria</option>
@@ -320,7 +320,6 @@ $ ->
         <option value="RS">Republic of Serbia</option>
         <option value="RE">Reunion</option>
         <option value="RO">Romania</option>
-        <option value="RU">Russia</option>
         <option value="RW">Rwanda</option>
         <option value="NT">St Barthelemy</option>
         <option value="EU">St Eustatius</option>

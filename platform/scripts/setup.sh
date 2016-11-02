@@ -1,3 +1,5 @@
+#!/bin/bash
+echo "[+] Running setup.sh"
 # create server folder
 mkdir -p /srv/http/ctf
 mkdir -p /srv/certs
@@ -9,5 +11,5 @@ mkdir -p /var/log/mongodb
 cp ${VAGRANT_PATH}/config/certs/* /srv/certs
 cp ${VAGRANT_PATH}/config/nginx/* /etc/nginx
 cp ${VAGRANT_PATH}/config/innoctf.com.nginx /etc/nginx/sites-enabled/innoctf.com.nginx
-rm /etc/nginx/sites-enabled/default
+rm /etc/nginx/sites-enabled/default 2>/dev/null
 service nginx restart
