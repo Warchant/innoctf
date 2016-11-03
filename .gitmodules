@@ -1,3 +1,0 @@
-[submodule "platform/problems/pwn/rustyserver/rustyserver"]
-	path = platform/problems/pwn/rustyserver/rustyserver
-	url = git@github.com:l4l/rustyserver.git
