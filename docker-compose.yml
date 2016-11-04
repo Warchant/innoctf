@@ -12,9 +12,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    command: bash -c "${VAGRANT_PATH}/scripts/setup.sh; \
-                      ${VAGRANT_PATH}/scripts/deploy.sh; \
-                      ${VAGRANT_PATH}/scripts/start.sh"
+    command: bash -c "${VAGRANT_PATH}/scripts/setup.sh;${VAGRANT_PATH}/scripts/deploy.sh;${VAGRANT_PATH}/scripts/start.sh"
     volumes:
       - ./platform:/innoctf
       - ./logs:/var/log
