@@ -4,11 +4,11 @@ renderProblemSubmit = _.template($("#problem-submit-template").remove().text())
 renderProblemReview = _.template($("#problem-review-template").remove().text())
 renderAchievementMessage = _.template($("#achievement-message-template").remove().text())
 
-@ratingMetrics = ["Difficulty", "Enjoyment", "Educational Value"]
-@ratingQuestion = {"Difficulty": "How difficult is this problem?", "Enjoyment": "Did you enjoy this problem?", "Educational Value": "How much did you learn while solving this problem?"}
-@ratingChoices = {"Difficulty": ["Too easy", "", "A bit challenging", "", "Very hard"], "Enjoyment": ["Hated it!", "", "It was okay.", "", "Loved it!"], "Educational Value": ["Nothing at all","", "Something useful", "", "Learned a lot!"]}
+@ratingMetrics = ["Сложность", "Удовольствие", "Полезность"]
+@ratingQuestion = {"Сложность": "Насколько сложное задание?", "Удовольствие": "Понравилось решать?", "Полезность": "Узнали что-нибудь новое?"}
+@ratingChoices = {"Сложность": ["Слишком легко", "", "В самый раз", "", "Очень сложно"], "Удовольствие": ["Ужасно", "", "Средненько.", "", "Очень понравился!"], "Полезность": ["Бесполезный таск","", "Средненько", "", "Много узнал нового!"]}
 
-@timeValues = ["5 minutes or less", "10 minutes", "20 minutes", "40 minutes", "1 hour", "2 hours", "3 hours", "4 hours", "5 hours", "6 hours", "8 hours", "10 hours", "15 hours", "20 hours", "30 hours", "40 hours or more"]
+@timeValues = ["Меньше 5 минут", "10 минут", "20 минут", "40 минут", "1 час", "2 часа", "3 часа", "4 часа", "5 часов", "6 часов", "8 часов"]
 
 sanitizeMetricName = (metric) ->
   metric.toLowerCase().replace(" ", "-")

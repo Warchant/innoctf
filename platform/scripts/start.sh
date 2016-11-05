@@ -5,6 +5,14 @@ echo "[+] Running start.sh"
 echo "Restarting the server"
 sudo service nginx restart
 
+echo "Generating web with Jekyll"
+cd ${VAGRANT_PATH}/web
+sudo jekyll build --watch &
+
+# Transpile the CoffeeScript files
+echo "Transpiling Coffeescript"
+coffee -w -c -o ${VAGRANT_PATH}/web/js/ ${VAGRANT_PATH}/web/coffee/ &
+
 # Clear the cache
 echo "Clearing the API cache"
 ${VAGRANT_PATH}/api/api_manager.py database clear cache

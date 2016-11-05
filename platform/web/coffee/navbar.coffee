@@ -1,57 +1,57 @@
 apiOffline =
-  About: "/about"
-  News: "/news"
+  Справка: "/about"
+  Новости: "/news"
 
 teacherLoggedIn =
-  Problems: "/problems"
+  Задания: "/problems"
 #  Shell: "/shell"
-  Scoreboard: "/scoreboard"
-  Classroom: "/classroom"
-  About:
-    About: "/about"
-    News: "/news"
-  Account:
-    Manage: "/account"
-    Logout: "#"
+  Рейтинг: "/scoreboard"
+  Класс: "/classroom"
+  Справка:
+    Справка: "/about"
+    Новости: "/news"
+  Аккаунт:
+    Настройка: "/account"
+    Выйти: "#"
 
 teacherLoggedInNoCompetition =
-  Classroom: "/classroom"
-  About: "/about"
-  News: "/news"
-  Account:
-    Manage: "/account"
-    Logout: "#"
+  Класс: "/classroom"
+  Справка: "/about"
+  Новости: "/news"
+  Аккаунт:
+    Настройка: "/account"
+    Выйти: "#"
 
 userLoggedIn =
-  Problems: "/problems"
+  Задания: "/problems"
 #  Shell: "/shell"
-  Team: "/team"
-  Chat: "/chat"
-  Scoreboard: "/scoreboard"
-  About:
-    About: "/about"
-    News: "/news"
-  Account:
-    Manage: "/account"
-    Logout: "#"
+  Команда: "/team"
+  Чат: "/chat"
+  Рейтинг: "/scoreboard"
+  Справка:
+    Справка: "/about"
+    Новости: "/news"
+  Аккаунт:
+    Настройка: "/account"
+    Выйти: "#"
 
 userLoggedInNoCompetition =
-  Team: "/team"
-  Chat: "/chat"
-  Scoreboard: "/scoreboard"
-  About:  
-    About: "/about"
-    News: "/news"
-  Account:
-    Manage: "/account"
-    Logout: "#"
+  Команда: "/team"
+  Чат: "/chat"
+  Рейтинг: "/scoreboard"
+  Справка:  
+    Справка: "/about"
+    Новости: "/news"
+  Аккаунт:
+    Настройка: "/account"
+    Выйти: "#"
 
 
 userNotLoggedIn =
-  About: "/about"
-  News: "/news"
-  Scoreboard: "/scoreboard"
-  Login: "/login"
+  Справка: "/about"
+  Новости: "/news"
+  Рейтинг: "/scoreboard"
+  Войти: "/login"
 
 loadNavbar = (renderNavbarLinks, renderNestedNavbarLinks) ->
 

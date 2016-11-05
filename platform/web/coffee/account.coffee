@@ -20,7 +20,7 @@ resetPassword = (e) ->
 
 disableAccount = (e) ->
   e.preventDefault()
-  confirmDialog("This will disable your account, drop you from your team, and prevent you from playing!", "Disable Account Confirmation", "Disable Account", "Cancel",
+  confirmDialog("Ваш аккаунт будет отключен, Вы будете исключены из команды и не сможете больше вернуться!", "Отключить подтверждение аккаунта", "Отключить", "Отмена",
   () ->
     form = $("#disable-account-form").serializeObject()
     apiCall "POST", "/api/user/disable_account", form
