@@ -14,8 +14,5 @@ echo "Generating web with Jekyll"
 cd ${VAGRANT_PATH}/web
 sudo jekyll build --watch &
 
-# copy favicons
-cp ${VAGRANT_PATH}/web/favicon/* /srv/http/ctf/
-
 # Make sure everything is in UNIX format.
 sudo dos2unix -q /srv/http/ctf/*.html
