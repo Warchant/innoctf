@@ -79,27 +79,27 @@ startup_functions:
 <script type="text/template" id="team-info-template">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title">Team: <strong><%- data.team_name %> <div class="pull-right"><%- data.competition_active ? data.score : '' %></strong></h3>
+      <h3 class="panel-title">Команда: <strong><%- data.team_name %> <div class="pull-right"><%- data.competition_active ? data.score : '' %></strong></h3>
     </div>
     <div class="panel-body">
-      <p>Your Team Passphrase is <strong><%- data.password %></strong>.</p>
-      <p>Members:</p>
+      <p>Пароль вашей команды: <strong><%- data.password %></strong>.</p>
+      <p>Участники:</p>
       <ul>
         <% _.each(data.members, function(username) { %>
           <li><%- username %></li>
         <% }); %>
       </ul>
         <% if (_.size(data.members) < data.max_team_size) { %>
-            <p>You may have up to <%- data.max_team_size - _.size(data.members) %> more member<%- (data.max_team_size - _.size(data.members)) == 1 ? "" : "s" %> on your team.</p>
-            <p>New team members can join at any time.</p>
+            <p>У вас может быть до  <%- data.max_team_size - _.size(data.members) %> more member<%- (data.max_team_size - _.size(data.members)) == 1 ? "" : "s" %> участников в команде.</p>
+            <p>Новый участник может присоединиться в любое время.</p>
         <% } else { %>
-            <p>Your team is full. No more members may join your team.</p>
+            <p>Нет свободных мест в команде.</p>
         <% }; %>
         <% if (data.eligible) { %>
-            <p>Your team is <b>eligible</b>.</p>
+            <p>Ваша команда участвует <b>в зачёте</b>.</p>
         <% } else { %>
-            <p>Your team is <b>ineligible</b> (<a href="#" class="poptrigger" id='eligibility-exp' data-container="body" data-toggle="popover" data-placement="right"
-                                                  data-content="">See Explanation</a>).</p>
+            <p>Ваша команда участвует <b>вне зачёта</b> (<a href="#" class="poptrigger" id='eligibility-exp' data-container="body" data-toggle="popover" data-placement="right"
+                                                  data-content="">Почему?</a>).</p>
         <% } %>
     </div>
   </div>
@@ -108,7 +108,7 @@ startup_functions:
 <script type="text/template" id="achievement-info-template">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title">Achievements</h3>
+      <h3 class="panel-title">Достижения</h3>
     </div>
     <div class="panel-body">
         <div style="height: 300px; overflow: auto;">
@@ -123,7 +123,7 @@ startup_functions:
                         </tr>
                     <% }); %>
                 <% } else { %>
-                    <tr><td>You currently have no achievements. Achievements are earned by solving challenges and playing through the story.</td></tr>
+                    <tr><td>У вас нет достижений. Решайте задания для получения.</td></tr>
                 <% } %>
             </table>
         </div>

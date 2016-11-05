@@ -110,7 +110,7 @@ startup_functions:
         <form class="problem-submit">
             <div class="input-group input-group-sm">
         <span class="input-group-btn">
-          <button class="btn btn-primary" type="submit">Submit!</button>
+          <button class="btn btn-primary" type="submit">Отправить!</button>
         </span>
                 <input type="text" data-pid="<%- problem.pid %>" class="form-control">
             </div>
@@ -136,8 +136,7 @@ startup_functions:
     <form class="form-horizontal problem-review-form" data-pid="<%= problem.pid %>">
         <% if(alreadyReviewed) { %>
         <div class="row">
-            <p><span class="label label-default">You have already reviewed this problem. Feel free to provide additional feedback.</span>
-            </p>
+            <p><span class="label label-default">Вы уже рассмотрели эту проблему. Ждём ваш отзыв.</span></p>
         </div>
         <% } %>
         <div class="form-group" style="width: 615px; margin-left: auto; margin-right: auto">
@@ -188,13 +187,13 @@ startup_functions:
             <div class="row">
                 <div class="col-md-12">
                     <h4>Any other thoughts?</h4>
-                    <textarea name="feedback" class="form-control" placeholder="Leave a comment here!"></textarea>
+                    <textarea name="feedback" class="form-control" placeholder="Оставить комментарий"></textarea>
                 </div>
             </div>
             <div class="row" style="margin-top: 15px">
                 <div class="col-md-12">
                      <span class="input-group-btn">
-                        <button class="btn btn-default feedback-button" type="submit">Send Feedback</button>
+                        <button class="btn btn-default feedback-button" type="submit">Отправить</button>
                     </span>
                 </div>
             </div>
