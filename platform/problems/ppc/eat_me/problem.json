@@ -1,7 +1,7 @@
 {"name": "Eat me",
  "score": 300,
  "category": "PPC",
- "server": "ppc/eat_me/grader.py",
+ "grader": "ppc/eat_me/grader.py",
  "description": "You need to play in classic russian game \"съедобное-несъедобное\". You need to guessing, can we eat this object(item) or not. You are limited in time",
  "threshold": 0,
  "autogen": false,
