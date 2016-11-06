@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PrivetBank</title>
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/jumbotron-narrow.css" %}" rel="stylesheet">
+    {% block head %}{% endblock %}
+</head>
+<body>
+<div class="container">
+    <div class="header clearfix">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% url "index" %}">PrivetBank</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        {% if user.is_authenticated %}
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">{{ user.username }} |
+                                    {{ account_rub_balance.balance }} {{ account_rub_balance.currency_name }}<span
+                                        class="caret"></span></a>
+                                <ul class="dropdown-menu list-group">
+                                    {% if account_balance %}
+                                        <li class="dropdown-header">Баланс счета:</li>
+                                        {% for balance, currency in account_balance %}
+                                            <li><a href="#">{{ balance }} {{ currency }}</a></li>
+                                        {% endfor %}
+                                        <li role="separator" class="divider"></li>
+                                    {% endif %}
+                                    <li><a href="{% url "password_change" %}">Изменить пароль</a></li>
+                                    <li><a href="{% url "logout" %}">Выход</a></li>
+                                </ul>
+                            </li>
+                        {% else %}
+                            <li><a href="{% url 'user_login' %}">Вход</a></li>
+                        {% endif %}
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-haspopup="true" aria-expanded="false">Операции<span class="caret"></span></a>
+                                <ul class="dropdown-menu list-group">
+                                    <li><a href="{% url 'loan_request' %}">Запрос кредита</a></li>
+                                    <li><a href="{% url "exchange" %}">Конвертация</a></li>
+                                    <li><a href="{% url "gift_card" %}">Подарочная карта</a></li>
+                                </ul>
+                            </li>
+                    </ul>
+                {% block nav_menu %}{% endblock %}
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+    </div>
+
+
+    {% block content %}{% endblock %}
+    <script src="https://code.jquery.com/jquery-3.1.0.js"
+            integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="
+            crossorigin="anonymous">
+    </script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="row">
+        <div class="col-lg-8">
+            <form name="exchange_form" action="" method="post">
+                {% csrf_token %}
+                {% if next %}
+                    <input type="hidden" name="next" value="{{ next }}"/>
+                {% endif %}
+                <div class="form-group">
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-warning" role="alert">
+                            {{ form.non_field_errors }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="{{ form.from_acc.id_for_label }}">Со счета:</label>
+                    <select id="{{ form.from_acc.id_for_label }}" class="form-control" name="{{ form.from_acc.name }}">
+                        {% for int, option in form.fields.from_acc.choices %}
+                            <option value="{{ int }}">{{ option }}</option>
+                        {% endfor %}
+                    </select>
+                    {% if form.from_acc.errors %}
+                        <div class="alert alert-warning" role="alert">
+                            {{ form.from_acc.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="{{ form.to_acc.id_for_label }}">На счет:</label>
+                    <select id="{{ form.to_acc.id_for_label }}" class="form-control" name="{{ form.to_acc.name }}">
+                        {% for int, option in form.fields.to_acc.choices %}
+                            <option value="{{ int }}">{{ option }}</option>
+                        {% endfor %}
+                    </select>
+                    {% if form.to_acc.errors %}
+                        <div class="alert alert-warning" role="alert">
+                            {{ form.to_acc.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    <label for="{{ form.amount.id_for_label }}">Сумма:</label>
+                    <input type="text" name="{{ form.amount.name }}" id="{{ form.amount.id_for_label }}" class="form-control">
+                    {% if form.amount.errors %}
+                        <div class="alert alert-warning" role="alert">
+                            {{ form.amount.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+                <button type="submit" class="btn btn-default" value="transfer">Ковертировать</button>
+            </form>
+        </div>
+        <div class="col-lg-4 text-center">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Курс валют</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table">
+                        {% for exchange_rate in exchange_rates %}
+                            <tr>
+                                <td>{{ exchange_rate.currency }}</td>
+                                <td>{{ exchange_rate.rate }}р</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

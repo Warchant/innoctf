@@ -1,0 +1,46 @@
+{% include 'base.html' %}
+{% block content %}
+    Форма подтверждения кредита
+    <form name="loan_approval_form" action="" method="post">
+        {% if next %}
+            <input type="hidden" name="next" value="{{ next }}"/>
+        {% endif %}
+        {{ form.non_field_errors }}
+        {% if loans %}
+            Заявки на займы
+            <table>
+                <tr>
+                    <th>ID транзакции</th>
+                    <th>Сумма</th>
+                    <th>Дата</th>
+                    <th>Доп. информация</th>
+                    <th>Статус</th>
+                </tr>
+                {% for loan in loans %}
+                    <tr>
+                        <td>{{ loan.id }}</td>
+                        <td>{{ loan.amount }}</td>
+                        <td>{{ loan.date }}</td>
+                        {% autoescape off %}
+                            <td>{{ loan.message }}</td>
+                        {% endautoescape %}
+                        <td>{% if loan.status == 1 %} Ожидание подтверждения {% elif loan.status == 2 %}
+                            Одобрен {% elif loan.status == 3 %}Отклонен{% endif %}</td>
+                        <td>
+                            <form name="loan_approval_form" action="" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" value="{{ loan.id }}" name="loan_id">
+                                {% if loan.status == 1 %}
+                                <button type="submit" value="approve" name="loan_approve">Одобрить</button>
+                                <button type="submit" value="decline" name="loan_decline">Отказать</button>
+                                {% endif %}
+                            </form>
+                        </td>
+                    <tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            Нет активных заявок
+        {% endif %}
+    </form>
+{% endblock %}
