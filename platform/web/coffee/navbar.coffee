@@ -1,5 +1,5 @@
 apiOffline =
-  Справка: "/about"
+  Инфо: "/about"
   Новости: "/news"
 
 teacherLoggedIn =
@@ -7,8 +7,8 @@ teacherLoggedIn =
 #  Shell: "/shell"
   Рейтинг: "/scoreboard"
   Класс: "/classroom"
-  Справка:
-    Справка: "/about"
+  Инфо:
+    Инфо: "/about"
     Новости: "/news"
   Аккаунт:
     Настройка: "/account"
@@ -16,7 +16,7 @@ teacherLoggedIn =
 
 teacherLoggedInNoCompetition =
   Класс: "/classroom"
-  Справка: "/about"
+  Инфо: "/about"
   Новости: "/news"
   Аккаунт:
     Настройка: "/account"
@@ -28,8 +28,8 @@ userLoggedIn =
   Команда: "/team"
   Чат: "/chat"
   Рейтинг: "/scoreboard"
-  Справка:
-    Справка: "/about"
+  Инфо:
+    Инфо: "/about"
     Новости: "/news"
   Аккаунт:
     Настройка: "/account"
@@ -39,8 +39,8 @@ userLoggedInNoCompetition =
   Команда: "/team"
   Чат: "/chat"
   Рейтинг: "/scoreboard"
-  Справка:  
-    Справка: "/about"
+  Инфо:  
+    Инфо: "/about"
     Новости: "/news"
   Аккаунт:
     Настройка: "/account"
@@ -48,7 +48,7 @@ userLoggedInNoCompetition =
 
 
 userNotLoggedIn =
-  Справка: "/about"
+  Инфо: "/about"
   Новости: "/news"
   Рейтинг: "/scoreboard"
   Войти: "/login"
