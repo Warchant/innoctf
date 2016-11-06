@@ -1,0 +1,10 @@
+{
+    "name": "Who is?",
+    "score": 50,
+    "category": "Forensics",
+    "grader": "forensics/whois/grader/grader.py",
+    "description": "We lost him! Please find his name and inform us!",
+    "threshold": 0,
+    "weightmap": {},
+    "hint": "Just Google"
+}

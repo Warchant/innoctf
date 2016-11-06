@@ -1,0 +1,9 @@
+{"name":"You in the army now!",
+ "score": 300,
+ "category": "PPC",
+ "grader": "ppc/you_in_the_army_now/grader.py",
+ "description": "Hello recruit! You have to go into the army, but first you must pass eye vision test. Do it!",
+ "threshold": 0,
+ "autogen": false,
+ "weightmap": {},
+ "hint": "You need to recognize the letters (only russian)"}

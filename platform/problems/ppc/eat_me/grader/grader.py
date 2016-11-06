@@ -1,7 +1,7 @@
 #!/bin/python
 
 def grade(arg, key):
-    if "InnoCTF{crypt0_m4g1c14n}" == key:
+    if "InnoCTF{Gr347_5ucc355!_y0u_4r3_w1n!_u53_7h1s_fl4g}" == key:
         return True, "Right!"
     else:
         return False, "Hmm, maybe some other time?"

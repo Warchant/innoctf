@@ -1,0 +1,9 @@
+{"name": "Telegram BOT's vol.2",
+ "score": 200,
+ "category": "Web",
+ "server": "web/tgbot2/grader.py",
+ "description": "You need to capture the flag from our bot! choose /difficulty 2",
+ "threshold": 0,
+ "autogen": false,
+ "weightmap": {},
+ "hint": "DB?"}
