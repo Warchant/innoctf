@@ -1,0 +1,9 @@
+{"name": "Warm up",
+ "score": 50,
+ "category": "Crypto",
+ "grader": "crypto/warmup/grader.py",
+ "generator": "crypto/warmup/generator.py",
+ "description": "Your task is to factorize this number: 42636039340331992210058546740792166576013353245409602617966930062210409285821.",
+ "threshold": 0,
+ "weightmap": {},
+ "hint": "Answer is the laargest factor in format: InnoCTF{number}. <a href='http://lmgtfy.com/?q=factorization'>click</a>"}

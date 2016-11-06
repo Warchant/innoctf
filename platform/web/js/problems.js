@@ -12,21 +12,21 @@
 
   renderAchievementMessage = _.template($("#achievement-message-template").remove().text());
 
-  this.ratingMetrics = ["Difficulty", "Enjoyment", "Educational Value"];
+  this.ratingMetrics = ["Сложность", "Удовольствие", "Полезность"];
 
   this.ratingQuestion = {
-    "Difficulty": "How difficult is this problem?",
-    "Enjoyment": "Did you enjoy this problem?",
-    "Educational Value": "How much did you learn while solving this problem?"
+    "Сложность": "Насколько сложное задание?",
+    "Удовольствие": "Понравилось решать?",
+    "Полезность": "Узнали что-нибудь новое?"
   };
 
   this.ratingChoices = {
-    "Difficulty": ["Too easy", "", "A bit challenging", "", "Very hard"],
-    "Enjoyment": ["Hated it!", "", "It was okay.", "", "Loved it!"],
-    "Educational Value": ["Nothing at all", "", "Something useful", "", "Learned a lot!"]
+    "Сложность": ["Слишком легко", "", "В самый раз", "", "Очень сложно"],
+    "Удовольствие": ["Ужасно", "", "Средненько.", "", "Очень понравилось!"],
+    "Полезность": ["Бесполезный таск", "", "Средненько", "", "Много узнал нового!"]
   };
 
-  this.timeValues = ["5 minutes or less", "10 minutes", "20 minutes", "40 minutes", "1 hour", "2 hours", "3 hours", "4 hours", "5 hours", "6 hours", "8 hours", "10 hours", "15 hours", "20 hours", "30 hours", "40 hours or more"];
+  this.timeValues = ["Меньше 5 минут", "10 минут", "20 минут", "40 минут", "1 час", "2 часа", "3 часа", "4 часа", "5 часов", "6 часов", "8 часов"];
 
   sanitizeMetricName = function(metric) {
     return metric.toLowerCase().replace(" ", "-");

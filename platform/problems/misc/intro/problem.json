@@ -2,7 +2,7 @@
     "name": "Welcome to the InnoCTF!",
     "score": 50,
     "category": "misc",
-    "grader": "misc/intro/grader/grader.py",
+    "grader": "misc/intro/grader.py",
     "description": "Flags are in 'InnoCTF{.*}' format",
     "threshold": 0,
     "weightmap": {},

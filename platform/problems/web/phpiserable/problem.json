@@ -1,0 +1,10 @@
+{
+  "name": "PHPiserable",
+  "score": 200,
+  "category": "Web",
+  "grader": "web/phpiserable/grader.py",
+  "description": "We hacked Pepe's site! Help us to get Pepe's password. <a href='problem-static/web/phpiserable/index.php'><img src='http://ih1.redbubble.net/image.53589211.4056/sticker,375x360.u1.png' width='50%' height='50%'/></a>",
+  "threshold": 0,
+  "weightmap": {},
+  "hint": "It looks like a magic, huh?"
+}

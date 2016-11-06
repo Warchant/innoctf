@@ -11,4 +11,5 @@ api/graders/*
 *~
 db
 logs
-
+platform/api/graders/
+platform/problem_static/
