@@ -2,7 +2,7 @@
  "score": 100,
  "category": "Web",
  "server": "web/tgbot1/grader.py",
- "description": "You need to capture the flag from our bot! choose /difficulty 1",
+ "description": "You need to capture the flag from our @InnoCTFBot! choose /difficulty 1",
  "threshold": 0,
  "autogen": false,
  "weightmap": {},
