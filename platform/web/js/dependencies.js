@@ -13,7 +13,7 @@
       cache: false
     }).fail(function(jqXHR, text) {
       ga('send', 'event', 'Error', 'APIOffline', url);
-      return $.notify("The picoCTF server is currently down. We will work to fix this error right away.", "error");
+      return $.notify("The InnoCTF server is currently down. We will work to fix this error right away.", "error");
     });
   };
 

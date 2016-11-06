@@ -61,8 +61,8 @@ class EST(datetime.tzinfo):
     def dst(self, dt):
         return datetime.timedelta(0)
 
-start_time = datetime.datetime(2015, 11, 20, 10, 00, 0, tzinfo=EST(3))
-end_time = datetime.datetime(2016, 11, 20, 19, 00, 00, tzinfo=EST(3))
+start_time = datetime.datetime(2016, 11, 20, 10, 30, 0, tzinfo=EST(3))
+end_time = datetime.datetime(2016, 11, 20, 18, 30, 00, tzinfo=EST(3))
 
 # Root directory of all problem graders
 api.problem.grader_base_path = "./graders"
@@ -99,7 +99,7 @@ api.utilities.from_addr = "admin@innoctf.com"
 api.utilities.from_name = "InnoCTF support"
 
 """ CAPTCHA """
-enable_captcha = False
+enable_captcha = False # don't enable. it is buggy :(
 captcha_url = "https://www.google.com/recaptcha/api/siteverify"
 reCAPTCHA_private_key = "6LeqewkUAAAAABuaenrh78xHblFqVXLvmAe3jYcR"
 

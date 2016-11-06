@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-
 def grade(arg, key):
-	flag = "InnoCTF{05fe6d8bb61f9115b672e73282e0cda7}"
+	flag = "InnoCTF{e9d160f9699503d2555323034c725c23}"
 	if flag in key:
 		return True, "Correct"
 	else:

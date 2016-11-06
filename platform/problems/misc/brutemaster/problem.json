@@ -1,0 +1,10 @@
+{
+    "name": "Brute Master",
+    "score": 100,
+    "category": "misc",
+    "grader": "misc/brutemaster/grader.py",
+    "description": "I've heard you like to bruteforce things? ",
+    "threshold": 0,
+    "weightmap": {},
+    "hint": "hashlib.algorithms"
+}

@@ -3,68 +3,68 @@
   var apiOffline, loadNavbar, teacherLoggedIn, teacherLoggedInNoCompetition, userLoggedIn, userLoggedInNoCompetition, userNotLoggedIn;
 
   apiOffline = {
-    About: "/about",
-    News: "/news"
+    Инфо: "/about",
+    Новости: "/news"
   };
 
   teacherLoggedIn = {
-    Problems: "/problems",
-    Scoreboard: "/scoreboard",
-    Classroom: "/classroom",
-    About: {
-      About: "/about",
-      News: "/news"
+    Задания: "/problems",
+    Рейтинг: "/scoreboard",
+    Класс: "/classroom",
+    Инфо: {
+      Инфо: "/about",
+      Новости: "/news"
     },
-    Account: {
-      Manage: "/account",
-      Logout: "#"
+    Аккаунт: {
+      Настройка: "/account",
+      Выйти: "#"
     }
   };
 
   teacherLoggedInNoCompetition = {
-    Classroom: "/classroom",
-    About: "/about",
-    News: "/news",
-    Account: {
-      Manage: "/account",
-      Logout: "#"
+    Класс: "/classroom",
+    Инфо: "/about",
+    Новости: "/news",
+    Аккаунт: {
+      Настройка: "/account",
+      Выйти: "#"
     }
   };
 
   userLoggedIn = {
-    Problems: "/problems",
-    Team: "/team",
-    Chat: "/chat",
-    Scoreboard: "/scoreboard",
-    About: {
-      About: "/about",
-      News: "/news"
+    Задания: "/problems",
+    Команда: "/team",
+    Чат: "/chat",
+    Рейтинг: "/scoreboard",
+    Инфо: {
+      Инфо: "/about",
+      Новости: "/news"
     },
-    Account: {
-      Manage: "/account",
-      Logout: "#"
+    Аккаунт: {
+      Настройка: "/account",
+      Выйти: "#"
     }
   };
 
   userLoggedInNoCompetition = {
-    Team: "/team",
-    Chat: "/chat",
-    Scoreboard: "/scoreboard",
-    About: {
-      About: "/about",
-      News: "/news"
+    Команда: "/team",
+    Чат: "/chat",
+    Рейтинг: "/scoreboard",
+    Инфо: {
+      Инфо: "/about",
+      Новости: "/news"
     },
-    Account: {
-      Manage: "/account",
-      Logout: "#"
+    Аккаунт: {
+      Настройка: "/account",
+      Выйти: "#"
     }
   };
 
   userNotLoggedIn = {
-    About: "/about",
-    News: "/news",
-    Scoreboard: "/scoreboard",
-    Login: "/login"
+    Инфо: "/about",
+    Новости: "/news",
+    Рейтинг: "/scoreboard",
+    Войти: "/login"
   };
 
   loadNavbar = function(renderNavbarLinks, renderNestedNavbarLinks) {
