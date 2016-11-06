@@ -1,0 +1,10 @@
+{
+    "name": "VK API vol.1",
+    "score": 100,
+    "category": "Recon",
+    "grader": "recon/vk1/grader/grader.py",
+    "description": "дана фотография, флаг – id пользователя, выложившего её первым.",
+    "threshold": 0,
+    "weightmap": {},
+    "hint": "Попробуйте использовать этот метод: https://vk.com/dev/photos.search"
+}
