@@ -1,0 +1,10 @@
+{
+    "name": "Printer",
+    "score": 300,
+    "category": "Forensics",
+    "grader": "forensics/printer/grader/grader.py",
+    "description": "We have intercepted <a target=_blank href='/problem-static/forensics/printer/static/printer-traffic.pcap'>the file sent to the printer</a>, you need to get what was printed.",
+    "threshold": 0,
+    "weightmap": {},
+    "hint": ""
+}

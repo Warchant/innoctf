@@ -1,0 +1,10 @@
+{
+    "name": "Message",
+    "score": 150,
+    "category": "Forensics",
+    "grader": "forensics/message/grader/grader.py",
+    "description": "We have intercepted <a target=_blank href='/problem-static/forensics/message/static/message.pcap'>the transmission</a>, can you understand what it says?",
+    "threshold": 0,
+    "weightmap": {},
+    "hint": ""
+}

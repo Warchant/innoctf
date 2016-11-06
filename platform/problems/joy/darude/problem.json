@@ -1,0 +1,10 @@
+{
+    "name": "Darude Sandstorm",
+    "score": 50,
+    "category": "Joy",
+    "grader": "joy/darude/grader/grader.py",
+    "description": "<a target=_blank href='/problem-static/joy/darude/static/darude.wav'>Song</a> name, please? Посоны, че за трек? Flag is the concatenation of the first letters of the song names in lower-case. For example, 'Darude - Sandstorm' is 's'.",
+    "threshold": 0,
+    "weightmap": {},
+    "hint": ""
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Find them all",
+    "score": 100,
+    "category": "Joy",
+    "grader": "joy/find-them-all/grader/grader.py",
+    "description": "There are several <a target=_blank href='/problem-static/joy/find-them-all/static/find-them-all.png'>pictures</a>, find them all! Flag is the concatenation of the first letters of their names in lower-case.",
+    "threshold": 0,
+    "weightmap": {},
+    "hint": ""
+}
