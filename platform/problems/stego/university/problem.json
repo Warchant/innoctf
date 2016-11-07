@@ -1,0 +1,9 @@
+{"name": "University logo",
+ "score": 100,
+ "category": "Steganography",
+ "grader": "stego/university/grader.py",
+ "description": "Capture the flag",
+ "threshold": 0,
+ "autogen": false,
+ "weightmap": {},
+ "hint": "mmm image"}
