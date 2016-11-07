@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Team
+title: Команда
 pre_scripts:
  - //cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/popover.js
  - //cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/tooltip.js
@@ -17,7 +17,7 @@ startup_functions:
       <div id="team-info"></div>
       <div class="panel panel-default" id="team-progression-graph-container" >
           <div class="panel-heading">
-             <h3 class="panel-title">Team Score Progression</h3>
+             <h3 class="panel-title">Баллы</h3>
           </div>
           <div class="panel-body team-panel-body">
              <div id="team-progression-graph"></div>
@@ -90,7 +90,7 @@ startup_functions:
         <% }); %>
       </ul>
         <% if (_.size(data.members) < data.max_team_size) { %>
-            <p>Можно добавить еще  <%- data.max_team_size - _.size(data.members) %> участник<%- (data.max_team_size - _.size(data.members)) == 1 ? "а" : "ов" %> в команду.</p>
+            <p>Можно добавить еще  <%- data.max_team_size - _.size(data.members) %> участник<%- (data.max_team_size - _.size(data.members)) == 1 ? "а" : "ов" %> в командуPs.</p>
             <p>Новый участник может присоединиться в любое время.</p>
         <% } else { %>
             <p>Нет свободных мест в команде.</p>
