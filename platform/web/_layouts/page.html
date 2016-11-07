@@ -14,17 +14,12 @@
 		<header class="page-title">
 			<div class="container">
 				<h1 id="title">{{ page.title }}</h1>
+                <div class="row">
+                    {{ content }}
+                </div>
 			</div>
 		</header>
 		{% endif %}
-
-        <div id="main-content">
-            <div class="container">
-              <div class="row">
-                {{ content }}
-              </div>
-            </div>
-        </div>
 
         {% include footer.html %}
 
