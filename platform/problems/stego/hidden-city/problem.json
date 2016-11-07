@@ -1,0 +1,10 @@
+{
+    "name": "Hidden city",
+    "score": 100,
+    "category": "Stego",
+    "grader": "stego/hidden-city/grader.py",
+    "description": "What <a target=_blank href='problem-static/stego/hidden-city/city.png'>city</a> is this? Can you see?",
+    "threshold": 0,
+    "weightmap": {},
+    "hint": ""
+}
