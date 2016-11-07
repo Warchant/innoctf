@@ -29,8 +29,8 @@
 $login = $_POST["login"];
 $pwd = $_POST["pwd"];
 
-if ($login == "admin" && hash('md5', $pwd, false) == "0e111111111111111111111111111111"){
-  $f = fopen("flag.txt", "rb") or die("Unable to open flag file! Ask @bvaneev!");
+if ($login == "admin" && (hash('md5', $pwd, false) == "0e111111111111111111111111111111")){
+  $f = fopen("/flag.txt", "rb");
   $flag = fgets($f);
   echo "$flag";
   fclose($f);
