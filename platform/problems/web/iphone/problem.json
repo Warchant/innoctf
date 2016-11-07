@@ -1,0 +1,9 @@
+{"name": "Not enough money",
+ "score": 50,
+ "category": "Web",
+ "grader": "web/iphone/grader.py",
+ "description": "Нужно Купить Iphone последней версии своей девушке",
+ "threshold": 0,
+ "autogen": false,
+ "weightmap": {},
+ "hint": ""}

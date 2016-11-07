@@ -2,7 +2,7 @@
     "name": "Can you repair IT?",
     "score": 450,
     "category": "Forensics",
-    "grader": "forensics/qr/grader/grader.py",
+    "grader": "forensics/qr/grader.py",
     "description": "You need to read this QR code. IT looks..... bad",
     "threshold": 0,
     "weightmap": {},
