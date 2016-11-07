@@ -1,7 +1,7 @@
 {"name": "Sample text!",
  "score": 100,
  "category": "Joy",
- "description": "Здесь должно быть описание",
+ "description": "<a href='problem-static/joy/cool/sddd.jpg'>Здесь должно быть описание</a> ",
  "threshold": 0,
  "autogen": false,
  "weightmap": {},

@@ -33,15 +33,13 @@ class ThreadedServer(object):
                 data = client.recv(size).decode("utf-8")
                 if data:
                     if(data == let):
-                        print ("NICE")
                         count += 1
-                        if(count == 5): #for debugging. 500 for release
+                        if(count == 1000): #for debugging. 500 for release
                             print("tut")
                             client.send(b'InnoCTF{Unc13_54m_d035_th3_b35t_h3_c4n}')
                             client.close()
                             break
                     else:
-                        print ("FAIL")
                         client.send(b'FAIL. TRY AGAIN')
                         client.close()
                         break
@@ -54,5 +52,5 @@ class ThreadedServer(object):
                 return False
 
 if __name__ == "__main__":
-    port_num = 40316
+    port_num = 31265
     ThreadedServer('',port_num).listen()

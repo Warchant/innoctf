@@ -68,7 +68,7 @@ else {
 		<form action="" method="get">
 			    <input value="russian" name="language" type="hidden" />
 			    <input value="19424" name="cost" type="hidden" />
-			    <input value="sibsutis_sctf" name="contest" type="hidden" />
+			    <input value="innoctf" name="contest" type="hidden" />
 			    <input value="today" name="time" type="hidden" />
 			    <input value="web3" name="task" type="hidden" />
 			<p><select name="model">

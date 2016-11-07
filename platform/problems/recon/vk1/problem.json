@@ -3,7 +3,7 @@
     "score": 100,
     "category": "Recon",
     "grader": "recon/vk1/grader.py",
-    "description": "дана фотография одного из мостов Новосибирска, на вид ей не больше года. флаг – id пользователя, выложившего её первым.",
+    "description": "дана фотография <a href='problem-static/recon/vk1/photo1.jpg>одного из мостов Новосибирска'</a>, на вид ей не больше года. флаг – id пользователя, выложившего её первым.",
     "threshold": 0,
     "weightmap": {},
     "hint": "Попробуйте использовать этот метод: https://vk.com/dev/photos.search"
