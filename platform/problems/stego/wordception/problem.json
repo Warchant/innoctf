@@ -2,8 +2,8 @@
     "name": "Wordception",
     "score": 300,
     "category": "Stego",
-    "grader": "stego/wordception/grader/grader.py",
-    "description": "We need to <a target=_blank href='/problem-static/stego/wordception/static/wordception.docx'>go deeper</a> <img src='/problem-static/stego/wordception/static/description.jpg' alt='zip'> ",
+    "grader": "stego/wordception/grader.py",
+    "description": "We need to <a target=_blank href='problem-static/stego/wordception/wordception.docx'>go deeper</a> <img src='problem-static/stego/wordception/description.jpg' alt='zip'> ",
     "threshold": 0,
     "weightmap": {},
     "hint": ""

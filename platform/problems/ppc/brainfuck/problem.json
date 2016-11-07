@@ -2,8 +2,8 @@
     "name": "fck my brain",
     "score": 400,
     "category": "PPC",
-    "grader": "ppc/brainfuck/grader/grader.py",
-    "description": "I've lost my 4-digit PIN code, you need to break the <a target=_blank href='/problem-static/ppc/brainfuck/static/task.txt'>code</a> and get the message",
+    "grader": "ppc/brainfuck/grader.py",
+    "description": "I've lost my 4-digit PIN code, you need to break the <a target=_blank href='problem-static/ppc/brainfuck/task.txt'>code</a> and get the message",
     "threshold": 0,
     "weightmap": {},
     "hint": ""
