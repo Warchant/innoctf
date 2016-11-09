@@ -1,10 +1,10 @@
 {
     "name": "Brute Master",
-    "score": 100,
+    "score": 250,
     "category": "misc",
     "grader": "misc/brutemaster/grader.py",
-    "description": "I've heard you like to bruteforce things? ",
+    "description": "Я слышал хакеры любят брутфорсить?",
     "threshold": 0,
     "weightmap": {},
-    "hint": "hashlib.algorithms"
+    "hint": ""
 }
