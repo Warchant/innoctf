@@ -1,7 +1,7 @@
 {"name": "Picture",
  "score": 250,
  "category": "Steganography",
- "grader": "stego/logo/grader.py",
+ "grader": "stego/picture/grader.py",
  "description": "<a href='problem-static/stego/picture/runaway.png'>Capture the flag</a>",
  "threshold": 0,
  "autogen": false,

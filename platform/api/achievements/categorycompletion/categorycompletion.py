@@ -21,7 +21,7 @@ def process(api, data):
         name = "Great Detectives"
     elif category == "Web":
         name = "Pentesters"
-    elif category == "Stego":
+    elif category == "Steganography":
         name = "Nothing remains hidden"
     elif category == "Joy":
         name = "Enjoyable"
@@ -29,6 +29,25 @@ def process(api, data):
         name = "Crazy coders"
 	elif category == "Recon":
         name = "Nice googling skills"
+    elif category == "Admin":
+        name = "Beardyteam"
+    elif category == "Misc":
+        name = "Anykeyteam"
+
+    '''
+    Categories:
+    Admin
+    Recon
+    Joy
+    PPC
+    Crypto
+    Steganography
+    PWN
+    Web
+    Forensics
+    Misc
+    Reverse
+    '''
 
     description = "Solved every '%s' challenge" % category
     return earned, {"name": name, "description": description}

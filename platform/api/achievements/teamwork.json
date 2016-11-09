@@ -1,5 +1,5 @@
 {"name": "Teamwork!",
- "description": "Everyone on your team has solved a problem.",
+ "description": "Каждый участник команды решил хотя бы одну задачу.",
  "event": "submit",
  "hidden": false,
  "score": 10,
