@@ -6,7 +6,7 @@ import csv
 #words = genfromtxt('words.csv', delimiter=',',dtype='str')
 words = []
 csv.register_dialect('unixpwd', delimiter=',', quoting=csv.QUOTE_NONE)
-with open('words.csv', newline='', encoding='utf-8') as f:
+with open('./words.csv', newline='', encoding='utf-8') as f:
     reader = csv.reader(f)
     for row in reader:
         words.append(row)

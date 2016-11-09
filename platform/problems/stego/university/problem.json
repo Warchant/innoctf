@@ -2,8 +2,8 @@
  "score": 100,
  "category": "Steganography",
  "grader": "stego/university/grader.py",
- "description": "<a href='problem-static/stego/picture/runaway.png'>Capture the flag</a>",
+ "description": "<a href='problem-static/stego/picture/runaway.png'>Флаг где-то тут</a>",
  "threshold": 0,
  "autogen": false,
  "weightmap": {},
- "hint": "mmm image"}
+ "hint": "мммм, картинка"}

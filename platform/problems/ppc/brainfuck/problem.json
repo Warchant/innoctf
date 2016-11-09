@@ -3,7 +3,7 @@
     "score": 400,
     "category": "PPC",
     "grader": "ppc/brainfuck/grader.py",
-    "description": "I've lost my 4-digit PIN code, you need to break the <a target=_blank href='problem-static/ppc/brainfuck/task.txt'>code</a> and get the message",
+    "description": "Я потерял мой четырехзначный PIN, вам нужно восстановить <a target='_blank' href='problem-static/ppc/brainfuck/task.txt'>код</a> и получить сообщение.",
     "threshold": 0,
     "weightmap": {},
     "hint": ""

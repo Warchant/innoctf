@@ -2,8 +2,8 @@
  "score": 400,
  "category": "Web",
  "grader": "web/tgbot3/grader.py",
- "description": "You need to capture the flag from our @InnoCTFBot! choose /difficulty 3",
+ "description": "Ваша задача забрать флаг у @InnoCTFBot! Выберите /difficulty 3",
  "threshold": 0,
  "autogen": false,
  "weightmap": {},
- "hint": "Flag not in DB!"}
+ "hint": "!DB"}

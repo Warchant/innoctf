@@ -2,6 +2,6 @@
 
 def grade(arg, key):
     if "InnoCTF{e51689c8}" == key:
-        return True, "Correct!"
+        return True, "+"
     else:
-        return False, "Wrong answer :("
+        return False, "-"
