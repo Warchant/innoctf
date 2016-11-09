@@ -1,0 +1,9 @@
+{"name": "I am first!",
+ "description": "Ваша команда первая решила это задание.",
+ "event": "submit",
+ "hidden": false,
+ "score": 50,
+ "processor": "iamfirst/iamfirst.py",
+ "image": "/img/achievements/silver.png",
+ "smallimage": "/img/achievements/silver_unlock.png",
+ "multiple": true}

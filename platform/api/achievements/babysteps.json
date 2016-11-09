@@ -1,0 +1,8 @@
+{"name": "Baby steps",
+ "description": "Ваша команда заработала больше 300 очков",
+ "event": "submit",
+ "hidden": false,
+ "score": 10,
+ "processor": "babysteps/babysteps.py",
+ "image": "/img/achievements/silver.png",
+ "smallimage": "/img/achievements/silver_unlock.png"}

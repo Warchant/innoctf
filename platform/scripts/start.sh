@@ -29,4 +29,4 @@ tmux new-session -s picoapi -d "cd ${VAGRANT_PATH}/api && bash gunicorn_start.sh
 echo "Starting scoreboard session"
 #tmux kill-session -t scoreboard 2> /dev/null
 #tmux new-session -s scoreboard -d "cd ${VAGRANT_PATH}/api/; python3 daemon_manager.py -i 300 cache_stats"
-cd ${VAGRANT_PATH}/api/; python3 daemon_manager.py -i 300 cache_stats
+cd ${VAGRANT_PATH}/api/; python3 daemon_manager.py -i 30 cache_stats

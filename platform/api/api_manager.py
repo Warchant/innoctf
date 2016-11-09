@@ -35,7 +35,7 @@ def insert_objects(f, files):
 def get_json_objects(files):
     objects = []
     for f in files:
-        contents = open(f, "r").read()
+        contents = open(f, "rb").read().decode('utf-8')
         data = json_util.loads(contents)
         if isinstance(data, list):
             objects += data
@@ -162,7 +162,7 @@ def load_problems(args):
     for (dirpath, dirnames, filenames) in walk(problem_dir):
         if "problem.json" in filenames:
             json_file = path.join(dirpath, 'problem.json')
-            contents = open(json_file, "r").read()
+            contents = open(json_file, "rb").read().decode("utf-8")
 
             try:
                 data = json_util.loads(contents)

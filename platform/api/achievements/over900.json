@@ -1,0 +1,8 @@
+{"name": "It's over 900!!!!111",
+ "description": "Ваша команда заработала 900 очков",
+ "event": "submit",
+ "hidden": false,
+ "score": 200,
+ "processor": "over900/over900.py",
+ "image": "/img/achievements/silver.png",
+ "smallimage": "/img/achievements/silver_unlock.png"}
