@@ -3,7 +3,7 @@
     "score": 100,
     "category": "Steganography",
     "grader": "stego/hidden-city/grader.py",
-    "description": "What <a target=_blank href='problem-static/stego/hidden-city/city.png'>city</a> is this? Can you see?",
+    "description": "Что за <a target=_blank href='problem-static/stego/hidden-city/city.png'>город</a>?",
     "threshold": 0,
     "weightmap": {},
     "hint": ""

@@ -1,16 +1,13 @@
-FROM ubuntu:trusty
-MAINTAINER Alexey Rodionov <rodionov12@gmail.com>
+FROM ubuntu
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get -yqq update && \
     apt-get -yqq install python3 python3-pip && \
     apt-get clean
 
-copy static/ /root
-# Define working directory.
-WORKDIR /root/static
+COPY static/ /root
 
 EXPOSE 47139
 
-# start app
-CMD [ "python3", "./server.py" ]
+WORKDIR /root
+CMD [ "python3", "server.py" ]

@@ -3,8 +3,8 @@
     "score": 50,
     "category": "Reverse",
     "grader": "rev/theARTofMONEY/grader.py",
-    "description": "Do you need some <a target=_blank href='problem-static/rev/theARTofMONEY/1C-accounting.exe'>money</a>? I am so tired of smashing the same buttons for all day. Cheating allowed.",
+    "description": "Вам нужны <a target=_blank href='problem-static/rev/theARTofMONEY/1C-accounting.exe'>деньги</a>? Нам надоело нажимать на одни и те же кнопки весь день.",
     "threshold": 0,
     "weightmap": {},
-    "hint": ""
+    "hint": "Читерство разрешено."
 }

@@ -3,7 +3,7 @@
     "score": 250,
     "category": "PWN",
     "grader": "pwn/rustyserver/grader.py",
-    "description": "We've made an entire server in <a href='https://www.rust-lang.org/en-US/'>Rust</a>! It cannot be defeated!",
+    "description": "Мы сделали целый сервер на <a href='https://www.rust-lang.org/en-US/'>Rust</a>! Вы не сможете взломать его!",
     "threshold": 0,
     "weightmap": {},
     "hint": ""
