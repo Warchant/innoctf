@@ -3,8 +3,8 @@
   "score": 300,
   "category": "Crypto",
   "grader": "crypto/wakeupneo/grader.py",
-  "description": "We've eavesdropped on <a href='problem-static/crypto/wakeupneo/matrix'>traffic from Neo's head</a> during dive into Matrix, help us decode it!",
+  "description": "Днём Томас Андерсон — обычный программист, работающий в компьютерной фирме 'Metacortex', а ночью — хакер по кличке Нео. Единственный вопрос, который мучает его последнее время, — 'Что такое Матрица?' <a href='problem-static/crypto/wakeupneo/matrix'>Траффик</a>",
   "threshold": 0,
   "weightmap": {},
-  "hint": "Encryption alphabet is [a-z0-9]"
+  "hint": "Алфавит [a-z0-9]"
 }

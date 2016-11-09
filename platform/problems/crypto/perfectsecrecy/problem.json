@@ -3,7 +3,7 @@
     "score": 500,
     "category": "Crypto",
     "grader": "crypto/perfectsecrecy/grader.py",
-    "description": "<p>After Enigma was broken, the Nazi started to use XOR cipher, which is considered uncrackable. Is it really so?</p><p><a href='static-files/crypto/perfectsecrecy/encrypted'>ciphertext</a></p><p><a href='static-files/crypto/perfectsecrecy/task.py'>encryptor</a></p>",
+    "description": "<p>После взлома Энигмы нацисты стали использовать другой шифр, который считался невзламываемым. Так ли это? </p><p><a href='static-files/crypto/perfectsecrecy/encrypted'>раз</a></p><p><a href='static-files/crypto/perfectsecrecy/task.py'>два</a></p>",
     "threshold": 0,
     "weightmap": {},
     "hint": "Nobody can crack this"
