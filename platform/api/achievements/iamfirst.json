@@ -1,9 +1,9 @@
-{"name": "Breakthrough",
- "description": "Your team was the first to solve this problem..",
+{"name": "I am first!",
+ "description": "Your team was the first to solve this problem.",
  "event": "submit",
  "hidden": false,
- "score": 100,
- "processor": "breakthrough/breakthrough.py",
+ "score": 50,
+ "processor": "iamfirst/iamfirst.py",
  "image": "/img/achievements/silver.png",
  "smallimage": "/img/achievements/silver_unlock.png",
  "multiple": true}
