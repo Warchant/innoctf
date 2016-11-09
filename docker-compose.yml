@@ -1,4 +1,6 @@
 version: '2'
+
+
 services:
   platform:
     image: warchantua/innoctf
@@ -18,12 +20,16 @@ services:
       - ./logs:/var/log
     depends_on:
       - mongodb
+    container_name: "platform"
     links:
       - mongodb
 
 
   mongoclient:
     image: mongoclient/mongoclient
+    container_name: "mongoclient"
+    networks: 
+      - outside
     links:
       - mongodb
 
@@ -31,6 +37,7 @@ services:
   mongodb:
     image: mongo
     hostname: mongodb
+    container_name: "mongodb"
     expose: 
       - "27017"
     volumes:
@@ -38,3 +45,6 @@ services:
       - ./platform/config/mongo/mongodb.conf:/etc/mongodb.conf
 
 
+networks:
+  outside:
+    external: true
