@@ -1,1 +1,1 @@
-This strange thing is one of the reasons why everybody hate PHP! InnoCTF{05fe6d8bb61f9115b672e73282e0cda7}
+This is one of the reasons why PHP is bad language. InnoCTF{05fe6d8bb61f9115b672e73282e0cda7}
