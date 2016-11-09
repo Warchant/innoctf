@@ -195,7 +195,6 @@ def validate(schema, data):
     Raises:
         APIException with status 0 and the voluptuous error message
     """
-
     try:
         schema(data)
     except MultipleInvalid as error:

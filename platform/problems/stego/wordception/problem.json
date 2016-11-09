@@ -1,7 +1,7 @@
 {
     "name": "Wordception",
     "score": 300,
-    "category": "Stego",
+    "category": "Steganography",
     "grader": "stego/wordception/grader.py",
     "description": "We need to <a target=_blank href='problem-static/stego/wordception/wordception.docx'>go deeper</a> <img src='problem-static/stego/wordception/description.jpg' alt='zip'> ",
     "threshold": 0,
