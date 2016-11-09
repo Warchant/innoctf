@@ -11,7 +11,7 @@ def process(api, data):
         problem = api.problem.get_problem(pid=data["pid"])
         valid = submissions[0]['tid'] == data['tid']
         return valid, {
-            "name": "Breakthrough!".format(problem["name"]),
+            "name": "I am first!".format(problem["name"]),
             "description": "Your team was the first team to solve {}.".format(problem["name"])
         }
     else:

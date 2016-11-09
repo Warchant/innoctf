@@ -11,20 +11,24 @@ def process(api, data):
             earned = False
 
     name = "Category Master"
-    if category == "Cryptography":
-        name = "Cryptography Experts"
-    elif category == "Reverse Engineering":
-        name = "Reversing Champions"
-    elif category == "Binary Exploitation":
-        name = "Binary Masters"
+    if category == "Crypto":
+        name = "Sons of Bruce Schneier"
+    elif category == "Reverse":
+        name = "Gods of reverse"
+    elif category == "PWN":
+        name = "My little PWNy"
     elif category == "Forensics":
         name = "Great Detectives"
-    elif category == "Web Exploitation":
-        name = "Masters of the Web"
-    elif category == "Master Challenge":
-        name = "Best of the Best"
-    elif category == "Miscellaneous":
-        name = "Any Dream Will Do"
+    elif category == "Web":
+        name = "Pentesters"
+    elif category == "Stego":
+        name = "Nothing remains hidden"
+    elif category == "Joy":
+        name = "Enjoyable"
+	elif category == "PPC":
+        name = "Crazy coders"
+	elif category == "Recon":
+        name = "Nice googling skills"
 
     description = "Solved every '%s' challenge" % category
     return earned, {"name": name, "description": description}
