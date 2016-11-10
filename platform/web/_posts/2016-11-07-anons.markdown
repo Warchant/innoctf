@@ -16,4 +16,4 @@ categories: anons
 
 К участию приглашаются команды вузов *Республики Татарстан*. Размер команды — *5* человек максимум. 
 
-Регистрация и информация на сайте: [Регистрация](https://innoctf.com/) и [информация](https://innoctf.com/about) на сайте [https://innoctf.com](https://innoctf.com).
+[Регистрация](https://innoctf.com/) и [информация](https://innoctf.com/about) на сайте [https://innoctf.com](https://innoctf.com).
