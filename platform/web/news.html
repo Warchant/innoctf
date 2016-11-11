@@ -7,8 +7,9 @@ title: Новости
             <h2>
                 {{ post.title }}
             </h2>
-            {{ post.content }}        
+            {{ post.content }}    
+            <hr />    
         {% endfor %}
-     <hr />
+     
     <p class="rss-subscribe">подпишитесь на новости: <a href="{{ "feed.xml" | prepend: site.baseurl }}"> via RSS</a></p>
 </div>
