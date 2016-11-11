@@ -6,4 +6,4 @@ categories: registration
 
 С `7 ноября 2016` года регистрация официально открыта! 
 
-Присоединяйтесь к нашей группе в Telegram: @innoctf
+Присоединяйтесь к нашей группе в Telegram: [@innoctf](telegram.me/innoctf)
