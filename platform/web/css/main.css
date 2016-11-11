@@ -1,3 +1,39 @@
+@font-face {
+    font-family: GothaPro;
+    src: url("fonts/GothaProReg.otf") format("opentype");
+}
+
+@font-face {
+    font-family: GothaPro;
+    font-weight: bold;
+    src: url("fonts/GothaProBol.otf") format("opentype");
+}
+
+@font-face {
+    font-family: GothaPro;
+    font-style: italic;
+    src: url("fonts/GothaProMedIta.otf") format("opentype");
+}
+
+@font-face {
+    font-family: GothaPro;
+    font-weight: bold;
+    font-style: italic;
+    src: url("fonts/GothaProBolIta.otf") format("opentype");
+}
+
+body, #title, h1, h2, h3, h4 {
+    font-family: "GothaPro"!important;
+}
+
+#title{
+    font-weight: 900;
+}
+
+.control-label {
+    font-size: 14px!important;
+}
+
 
 #main-content {
     min-height: 35vh;

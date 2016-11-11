@@ -35,15 +35,15 @@ services:
 #    links:
 #      - mongodb
 
-  metabase:
-    image: metabase/metabase
-    container_name: "metabase"
-    expose:
-      - 3000
-    networks: 
-      - outside
-    links:
-      - mongodb
+#  metabase:
+#    image: metabase/metabase
+#    container_name: "metabase"
+#    expose:
+#      - 3000
+#    networks: 
+#      - outside
+#    links:
+#      - mongodb
 
 
   mongodb:

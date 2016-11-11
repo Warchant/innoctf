@@ -1,5 +1,5 @@
 # Site settings
-title: InnoCTF 2016
+title: InnoCTF <strong>2016</strong>
 
 destination: /srv/http/ctf
 exclude: ['coffee', 'node_modules']
