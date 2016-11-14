@@ -30,8 +30,6 @@ services:
 #    container_name: "mongoclient"
 #    expose:
 #      - 3000
-#    networks: 
-#      - outside
 #    links:
 #      - mongodb
 
@@ -40,8 +38,6 @@ services:
 #    container_name: "metabase"
 #    expose:
 #      - 3000
-#    networks: 
-#      - outside
 #    links:
 #      - mongodb
 
@@ -56,7 +52,3 @@ services:
       - ./db:/data/db
       - ./platform/config/mongo/mongodb.conf:/etc/mongodb.conf
 
-
-networks:
-  outside:
-    external: true

@@ -31,9 +31,8 @@ body, #title, h1, h2, h3, h4 {
 }
 
 .control-label {
-    font-size: 14px!important;
+    font-size: 13px!important;
 }
-
 
 #main-content {
     min-height: 35vh;
