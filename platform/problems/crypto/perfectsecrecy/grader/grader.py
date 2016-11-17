@@ -2,6 +2,6 @@
 
 def grade(arg, key):
     if "InnoCTF{xorcipherisnotsecure}" in key:
-        return True, "Unglaublich!"
+        return True, "Флаг принят"
     else:
-        return False, "Schießen!"
+        return False, "Неверный флаг"

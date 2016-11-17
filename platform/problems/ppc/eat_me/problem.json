@@ -2,8 +2,8 @@
  "score": 300,
  "category": "PPC",
  "grader": "ppc/eat_me/grader.py",
- "description": "You need to play in classic russian game \"съедобное-несъедобное\". You need to guessing, can we eat this object(item) or not. You are limited in time",
+ "description": "Сыграйте в русскую игру \"съедобное-несъедобное\". Действуйте быстро, мы не можем ждать",
  "threshold": 0,
  "autogen": false,
  "weightmap": {},
- "hint": "Total word count - 583. You need to brute force this task"}
+ "hint": ""}

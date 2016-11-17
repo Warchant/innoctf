@@ -2,6 +2,6 @@
 
 def grade(arg, key):
     if "InnoCTF{28ed154a248fb930f83464b131afb24a}" == key:
-        return True, "Correct! Good job!"
+        return True, "Флаг принят"
     else:
-        return False, "Wrong answer, go deeper"
+        return False, "Неверный флаг"

@@ -3,7 +3,7 @@
     "score": 100,
     "category": "Crypto",
     "grader": "crypto/easy-crypto/grader.py",
-    "description": "Can you decrypt <a target=_blank href='problem-static/crypto/easy-crypto/flag.png.bin'>it</a>? <a target=_blank href='problem-static/crypto/easy-crypto/script.py'>This script</a> was used for encryption but the key was erased",
+    "description": "Помоги расшифровать <a target=_blank href='problem-static/crypto/easy-crypto/flag.png.bin'></a>? <a target=_blank href='problem-static/crypto/easy-crypto/script.py'>Это скрипт</a>, который использовали для шифрования, но ключ удален",
     "threshold": 0,
     "weightmap": {},
     "hint": ""

@@ -2,7 +2,7 @@
  "score": 300,
  "category": "Web",
  "grader": "web/ctf_bank_300/grader.py",
- "description": "<a href="188.130.155.58:8000">http://188.130.155.58:8000</a>",
+ "description": "<a href='188.130.155.58:8000'>http://188.130.155.58:8000</a>",
  "threshold": 0,
  "autogen": false,
  "weightmap": {},

@@ -2,8 +2,8 @@
 
 def grade(arg, key):
     if "InnoCTF{banana}" == key:
-        return True, "Correct!"
+        return True, "Флаг принят"
 	elif "InnoCTF{flagisbanana}" == key:
-        return True, "Correct!"
+        return True, "Флаг принят"
     else:
-        return False, "Wrong answer :("
+        return False, "Неверный флаг"

@@ -2,6 +2,6 @@
 
 def grade(arg, key):
     if "InnoCTF{rounding_problem_is_still_alive_and_breathing}" == key:
-        return True, "Right!"
+        return True, "Флаг принят"
     else:
-        return False, "Hmm, maybe some other time?"
+        return False, "Неверный флаг"

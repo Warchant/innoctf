@@ -1,9 +1,9 @@
 {
     "name": "Printer",
-    "score": 300,
+    "score": 250,
     "category": "Forensics",
     "grader": "forensics/printer/grader.py",
-    "description": "We have intercepted <a target=_blank href='problem-static/forensics/printer/printer-traffic.pcap'>the file sent to the printer</a>, you need to get what was printed.",
+    "description": " Кто-то пытается отправить <a target=_blank href='problem-static/forensics/printer/printer-traffic.pcap'>файл</a> на печать. Помогите разобрать что там",
     "threshold": 0,
     "weightmap": {},
     "hint": ""

@@ -2,6 +2,6 @@
 
 def grade(arg, key):
     if "InnoCTF{Win32.Trojaner.DeutschePorno}" == key:
-        return True, "Nice! Proceed further"
+        return True, "Флаг принят"
     else:
-        return False, "Ehm, how did you do that?"
+        return False, "Неверный флаг"
