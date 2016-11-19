@@ -4,5 +4,4 @@
  "hidden": false,
  "score": 100,
  "processor": "firstblood/firstblood.py",
- "image": "/img/achievements/silver.png",
- "smallimage": "/img/achievements/silver_unlock.png"}
+ "image": "/img/achievements/firstblood.png"}

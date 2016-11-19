@@ -4,5 +4,4 @@
  "hidden": false,
  "score": 10,
  "processor": "babysteps/babysteps.py",
- "image": "/img/achievements/silver.png",
- "smallimage": "/img/achievements/silver_unlock.png"}
+ "image": "/img/achievements/babysteps.png"}
