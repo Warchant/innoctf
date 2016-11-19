@@ -1,6 +1,6 @@
 {
   "name": "Tryhard",
-  "description": "Десять попыток! Вот это напор!",
+  "description": "Вот это напор!",
   "event": "submit",
   "hidden": false,
   "score": 50,

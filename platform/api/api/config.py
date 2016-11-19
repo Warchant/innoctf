@@ -61,7 +61,7 @@ class EST(datetime.tzinfo):
     def dst(self, dt):
         return datetime.timedelta(0)
 
-start_time = datetime.datetime(2015, 11, 20, 10, 30, 0, tzinfo=EST(3))
+start_time = datetime.datetime(2016, 11, 20, 10, 30, 0, tzinfo=EST(3))
 end_time = datetime.datetime(2016, 11, 20, 18, 30, 00, tzinfo=EST(3))
 
 # Root directory of all problem graders
@@ -92,9 +92,9 @@ shell_user_creation = "sudo useradd -m {username} -p {password}"
 """ EMAIL (SMTP) """
 
 api.utilities.enable_email = True
-api.utilities.smtp_url = "mail.innoctf.com"
-api.utilities.email_username = "admin"
-api.utilities.email_password = "nanfyvmkprpksptj"
+api.utilities.smtp_url = "smtp.yandex.ru:465"
+api.utilities.email_username = "admin@innoctf.com"
+api.utilities.email_password = "9SDde5V05GcQdOtBGipi"
 api.utilities.from_addr = "admin@innoctf.com"
 api.utilities.from_name = "InnoCTF support"
 

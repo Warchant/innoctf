@@ -25,9 +25,9 @@ def process(api, data):
         name = "Nothing remains hidden"
     elif category == "Joy":
         name = "Enjoyable"
-	elif category == "PPC":
+    elif category == "PPC":
         name = "Crazy coders"
-	elif category == "Recon":
+    elif category == "Recon":
         name = "Nice googling skills"
     elif category == "Admin":
         name = "Beardyteam"

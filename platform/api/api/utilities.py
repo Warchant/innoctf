@@ -49,16 +49,20 @@ def send_email(recipient, subject, body):
 
     #TODO: clean this up
     if enable_email:
-        msg = MIMEMultipart('alternative')
-        msg['Subject'] = subject
-        msg['From'] = formataddr((from_name, from_addr))
-        msg['To'] = recipient
-        part1 = MIMEText(body, 'plain')
-        msg.attach(part1)
-        s = smtplib.SMTP_SSL(smtp_url)
-        s.login(email_username, email_password)
-        s.sendmail(from_addr, recipient, msg.as_string())
-        s.quit()
+        try:
+            msg = MIMEMultipart('alternative')
+            msg['Subject'] = subject
+            msg['From'] = formataddr((from_name, from_addr))
+            msg['To'] = recipient
+            part1 = MIMEText(body, 'plain')
+            msg.attach(part1)
+            s = smtplib.SMTP_SSL(smtp_url)
+            s.login(email_username, email_password)
+            s.sendmail(from_addr, recipient, msg.as_string())
+            s.quit()
+        except Exception as e:
+            with open("/tmp/innoctf.log", "a") as log:
+                log.write("MAILER: " + str(e) + "\n\n")
     else:
         print("Emailing is disabled, not sending.")
 
@@ -87,6 +91,7 @@ def reset_password(token, password, confirm_password):
     """
 
     validate(password_reset_schema, {"token": token, "password": password})
+    print(1)
     user = api.user.find_user_by_reset_token(token)
     api.user.update_password_request({
             "new-password": password,
