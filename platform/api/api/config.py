@@ -94,7 +94,7 @@ shell_user_creation = "sudo useradd -m {username} -p {password}"
 api.utilities.enable_email = True
 api.utilities.smtp_url = "mail.innoctf.com"
 api.utilities.email_username = "admin"
-api.utilities.email_password = "9SDde5V05GcQdOtBGipi"
+api.utilities.email_password = "nanfyvmkprpksptj"
 api.utilities.from_addr = "admin@innoctf.com"
 api.utilities.from_name = "InnoCTF support"
 
