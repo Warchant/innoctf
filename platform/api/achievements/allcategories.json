@@ -1,8 +1,7 @@
 {"name": "Jacks of all Trades",
- "description": "Ваша команда решила по 1 заданию из кадой категории.",
+ "description": "Ваша команда решила по 1 заданию из каждой категории.",
  "event": "submit",
  "hidden": false,
  "score": 150,
  "processor": "allcategories/allcategories.py",
- "image": "/img/achievements/silver.png",
- "smallimage": "/img/achievements/silver_unlock.png"}
+ "image": "/img/achievements/allcategories.png"}

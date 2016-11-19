@@ -5,6 +5,5 @@
   "hidden": false,
   "score": 50,
   "processor": "tryhard/tryhard.py",
-  "image": "/img/achievements/tryhard.png",
-  "smallimage": "/img/achievements/tryhard_small.png"
+  "image": "/img/achievements/tryhard.jpg"
 }

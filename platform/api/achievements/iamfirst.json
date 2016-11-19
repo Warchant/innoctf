@@ -4,6 +4,5 @@
  "hidden": false,
  "score": 50,
  "processor": "iamfirst/iamfirst.py",
- "image": "/img/achievements/silver.png",
- "smallimage": "/img/achievements/silver_unlock.png",
+ "image": "/img/achievements/iamfirst.jpg",
  "multiple": true}

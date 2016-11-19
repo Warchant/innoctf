@@ -4,6 +4,4 @@
  "multiple": true,
  "hidden": false,
  "score": 300,
- "processor": "categorycompletion/categorycompletion.py",
- "image": "/img/achievements/silver.png",
- "smallimage": "/img/achievements/silver_unlock.png"}
+ "processor": "categorycompletion/categorycompletion.py"}
