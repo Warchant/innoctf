@@ -3,8 +3,8 @@
     "score": 100,
     "category": "Forensics",
     "grader": "forensics/person/grader.py",
-    "description": "About whom the question is?",
+    "description": "О ком это я?",
     "threshold": 0,
     "weightmap": {},
-    "hint": "Use Google, Luke!"
+    "hint": ""
 }

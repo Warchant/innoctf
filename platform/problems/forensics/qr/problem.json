@@ -3,8 +3,8 @@
     "score": 450,
     "category": "Forensics",
     "grader": "forensics/qr/grader.py",
-    "description": "You need to read this <a href='problem-static/forensics/qr/qr.jpg'>QR code</a>. IT looks..... bad",
+    "description": "Нам нужно понять, что на этом <a href='problem-static/forensics/qr/qr.jpg'>QR коде</a>. Выглядит....ужасно",
     "threshold": 0,
     "weightmap": {},
-    "hint": "Use Photoshop, Luke!"
+    "hint": ""
 }

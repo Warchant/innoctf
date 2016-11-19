@@ -3,8 +3,8 @@
     "score": 50,
     "category": "Forensics",
     "grader": "forensics/whois/grader.py",
-    "description": "We lost <a href='problem-static/forensics/whois/21.jpg'>him</a>! Please find his name and inform us!",
+    "description": "<a href='problem-static/forensics/whois/21.jpg'>Он пропал</a>! Пожалуйста, помогите его найти",
     "threshold": 0,
     "weightmap": {},
-    "hint": "Just Google"
+    "hint": ""
 }
