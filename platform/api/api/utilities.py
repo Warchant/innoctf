@@ -49,20 +49,16 @@ def send_email(recipient, subject, body):
 
     #TODO: clean this up
     if enable_email:
-        try:
-            msg = MIMEMultipart('alternative')
-            msg['Subject'] = subject
-            msg['From'] = formataddr((from_name, from_addr))
-            msg['To'] = recipient
-            part1 = MIMEText(body, 'plain')
-            msg.attach(part1)
-            s = smtplib.SMTP_SSL(smtp_url)
-            s.login(email_username, email_password)
-            s.sendmail(from_addr, recipient, msg.as_string())
-            s.quit()
-        except Exception as e:
-            with open("/tmp/innoctf.log", "a") as log:
-                log.write("MAILER: " + str(e) + "\n\n")
+        msg = MIMEMultipart('alternative')
+        msg['Subject'] = subject
+        msg['From'] = formataddr((from_name, from_addr))
+        msg['To'] = recipient
+        part1 = MIMEText(body, 'plain')
+        msg.attach(part1)
+        s = smtplib.SMTP_SSL(smtp_url)
+        s.login(email_username, email_password)
+        s.sendmail(from_addr, recipient, msg.as_string())
+        s.quit()
     else:
         print("Emailing is disabled, not sending.")
 
