@@ -30,11 +30,13 @@ achievement_schema = Schema({
             lambda hidden: type(hidden) == bool])),
     Required("image"): check(
         ("An achievement's image path must be a string.", [str])),
+    '''
     Required("smallimage"): check(
         ("An achievement's smallimage path must be a string.", [str])),
     "disabled": check(
         ("An achievement's disabled state is either True or False.", [
             lambda disabled: type(disabled) == bool])),
+    '''
     "multiple": check(
         ("Whether an achievement can be earned multiple times is either True or False.", [
             lambda disabled: type(disabled) == bool])),
@@ -348,7 +350,11 @@ def insert_achievement(achievement):
     """
 
     db = api.common.get_conn()
-    validate(achievement_schema, achievement)
+    try:
+        validate(achievement_schema, achievement)
+    except Exception as e:
+        with open("/tmp/innoctf.log", "a") as log:
+            log.write(str(e) + "\n\n")
 
     achievement["disabled"] = achievement.get("disabled", False)
 

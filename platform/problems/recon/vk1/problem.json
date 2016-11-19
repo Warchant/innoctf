@@ -3,8 +3,8 @@
     "score": 100,
     "category": "Recon",
     "grader": "recon/vk1/grader.py",
-    "description": "<p><img src=\"problem-static/recon/vk1/photo1.jpg\"/></p> <p>Фото одного из мостов Новосибирска, на вид ей не больше года. Флаг = id пользователя, выложившего её первым. Формат флага InnoCTF{id}</p>",
+    "description": "<p><a href=\"problem-static/recon/vk1/photo1.jpeg\">Фото</a> одного из мостов Новосибирска, на вид ему не больше года.</p>",
     "threshold": 0,
     "weightmap": {},
-    "hint": ""
+    "hint": "Флаг = id пользователя, выложившего её первым. Формат флага InnoCTF{id}"
 }

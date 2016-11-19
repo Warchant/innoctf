@@ -1,8 +1,8 @@
 {
     "name": "Fancy task",
     "score": 50,
-    "category": "Admin",
-    "grader": "admin/fancytask/grader.py",
+    "category": "Recon",
+    "grader": "recon/fancytask/grader.py",
     "description": "Админ innoctf.com что-то спрятал в textе. Может, это флаг? ",
     "threshold": 0,
     "weightmap": {},

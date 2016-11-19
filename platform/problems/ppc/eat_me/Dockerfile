@@ -1,12 +1,7 @@
-FROM ubuntu
-
-ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get -yqq update && \
-    apt-get -yqq install python3 python3-pip && \
-    apt-get clean
-
+FROM python:3
 COPY static/ /root
-
+RUN apt-get -y update && apt-get -yqq install locales; \
+	locale-gen ru_RU.UTF-8
 EXPOSE 47139
 
 WORKDIR /root

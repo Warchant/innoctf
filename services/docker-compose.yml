@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+  eat_me:
+    build: ../platform/problems/ppc/eat_me/
+    ports:
+      - "10000:47139"
+
+  you_in_the_army_now:
+    build: ../platform/problems/ppc/you_in_the_army_now/
+    ports:
+      - "10001:31265"
+
+  brutemaster:
+    build: ../platform/problems/misc/brutemaster/
+    ports:
+      - "10002:50001"
+
+  phpiserable:
+    build: ../platform/problems/web/phpiserable/
+    ports:
+      - "10003:80"
+
+  rustyserver:
+    build: ../platform/problems/pwn/rustyserver/
+    ports:
+      - "10004:8765"
+
+  person:
+    build: ../platform/problems/forensics/person/
+    ports:
+      - "10005:80"

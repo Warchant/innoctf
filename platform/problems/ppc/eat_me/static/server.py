@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import socket
 import threading
 import random
@@ -10,7 +11,7 @@ with open('./words.csv', newline='', encoding='utf-8') as f:
     reader = csv.reader(f)
     for row in reader:
         words.append(row)
-answers = ["СЪЕДОБНОЕ", "НЕСЪЕДОБНОЕ"]
+answers = [u"СЪЕДОБНОЕ", u"НЕСЪЕДОБНОЕ"]
 class ThreadedServer(object):
     def __init__(self, host, port):
         self.host = host
@@ -39,7 +40,7 @@ class ThreadedServer(object):
             try:
                 data = client.recv(size).decode('utf-8')
                 if data:
-                    if(data == answer):
+                    if(data.upper() == answer.upper()):
                         count += 1
                         if(count == 1000):
                             client.send(b'InnoCTF{Gr347_5ucc355!_y0u_4r3_w1n!_u53_7h1s_fl4g}')

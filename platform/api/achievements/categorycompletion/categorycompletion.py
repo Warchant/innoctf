@@ -13,52 +13,44 @@ def process(api, data):
     name = "Category Master"
     if category == "Crypto":
         name = "Sons of Bruce Schneier"
-        image = "/img/achievements/categorycompletion-crypto.png"
+        image = "categorycompletion-crypto.png"
+
     elif category == "Reverse":
         name = "Gods of reverse"
-        image = "/img/achievements/categorycompletion-reverse.png"
+        image = "categorycompletion-reverse.png"
+
     elif category == "PWN":
         name = "My little PWNy"
-        image = "/img/achievements/categorycompletion-pwn.png"
+        image = "categorycompletion-pwn.png"
+
     elif category == "Forensics":
         name = "Great Detectives"
-        image = "/img/achievements/categorycompletion-forensics.jpeg"
+        image = "categorycompletion-forensics.jpeg"
+
     elif category == "Web":
         name = "Pentesters"
-        image = "/img/achievements/categorycompletion-web.png"
+        image = "categorycompletion-web.png"
+
     elif category == "Steganography":
         name = "Nothing remains hidden"
-        image = "/img/achievements/categorycompletion-stegano.png"
+        image = "categorycompletion-stegano.png"
+
     elif category == "Joy":
         name = "Enjoyable"
-        image = "/img/achievements/categorycompletion-joy.png"
+        image = "categorycompletion-joy.png"
+
     elif category == "PPC":
         name = "Crazy coders"
-        image = "/img/achievements/categorycompletion-ppc.jpg"
+        image = "categorycompletion-ppc.jpg"
+
     elif category == "Recon":
         name = "Nice googling skills"
-        image = "/img/achievements/categorycompletion-recon.png"
-    elif category == "Admin":
-        name = "Beardyteam"
-        image = "/img/achievements/categorycompletion-admin.png"
+        image = "categorycompletion-recon.png"
+
     elif category == "Misc":
         name = "Anykeyteam"
-        image = "/img/achievements/categorycompletion-misc.png"
+        image = "categorycompletion-misc.png"
 
-    '''
-    Categories:
-    Admin
-    Recon
-    Joy
-    PPC
-    Crypto
-    Steganography
-    PWN
-    Web
-    Forensics
-    Misc
-    Reverse
-    '''
-
+    big = "/img/achievements/" + image
     description = "Вы решили каждое задание в категории '%s'" % category
-    return earned, {"name": name, "description": description, "image": image}
+    return earned, {"name": name, "description": description, "image": big}
