@@ -87,6 +87,7 @@ def reset_password(token, password, confirm_password):
     """
 
     validate(password_reset_schema, {"token": token, "password": password})
+    print(1)
     user = api.user.find_user_by_reset_token(token)
     api.user.update_password_request({
             "new-password": password,
