@@ -14,7 +14,7 @@ class ThreadedServer(object):
         self.sock.listen(50)
         while True:
             client, address = self.sock.accept()
-            client.settimeout(1) # for debugging. 1 sec for release
+            client.settimeout(500) # for debugging. 1 sec for release
             threading.Thread(target = self.listenToClient,args = (client,address)).start()
 
     def listenToClient(self, client, address):
@@ -34,7 +34,7 @@ class ThreadedServer(object):
                 if data:
                     if(data == let):
                         count += 1
-                        if(count == 1000): #for debugging. 500 for release
+                        if(count == 500): #for debugging. 500 for release
                             print("tut")
                             client.send(b'InnoCTF{Unc13_54m_d035_th3_b35t_h3_c4n}')
                             client.close()
