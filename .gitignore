@@ -17,3 +17,6 @@ logs
 platform/api/graders/
 platform/problem_static/
 api/api/config.py
+
+db_*
+DB_*

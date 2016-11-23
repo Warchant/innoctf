@@ -21,10 +21,10 @@ class ThreadedServer(object):
         self.sock.bind((self.host, self.port))
 
     def listen(self):
-        self.sock.listen(50)
+        self.sock.listen(500)
         while True:
             client, address = self.sock.accept()
-            client.settimeout(1)
+            client.settimeout(500)
             threading.Thread(target = self.listenToClient,args = (client,address)).start()
 
     def listenToClient(self, client, address):
@@ -42,7 +42,7 @@ class ThreadedServer(object):
                 if data:
                     if(data.upper() == answer.upper()):
                         count += 1
-                        if(count == 1000):
+                        if(count == 500):
                             client.send(b'InnoCTF{Gr347_5ucc355!_y0u_4r3_w1n!_u53_7h1s_fl4g}')
                             client.close()
                             break
